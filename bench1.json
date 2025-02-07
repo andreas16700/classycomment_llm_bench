@@ -1,0 +1,2990 @@
+{
+    "Abfss.java": {
+        "phi-4": {
+            "summary": [
+                "Azure Blob File System implementation of AbstractFileSystem."
+            ],
+            "rationale": [
+                "This impl delegates to the old FileSystem"
+            ]
+        },
+        "qwen2.5-14b-instruct-mlx": {
+            "summary": [
+                "Azure Blob File System implementation of AbstractFileSystem."
+            ],
+            "expand": [
+                "This impl delegates to the old FileSystem."
+            ]
+        },
+        "meta-llama-3.1-8b-instruct": {
+            "summary": [
+                "Azure Blob File System implementation of AbstractFileSystem.",
+                "This impl delegates to the old FileSystem"
+            ]
+        }
+    },
+    "AbstractContractGetFileStatusTest.java": {
+        "phi-4": {
+            "summary": [
+                "* Test getFileStatus and related listing operations."
+            ],
+            "rationale": [
+                "| the tree parameters. Kept small to avoid killing object store test| runs too much.|"
+            ],
+            "usage": [
+                "* Accept everything.",
+                "* Accept nothing.",
+                "* Path filter which only expects paths whose final name element * equals the {@code match} field."
+            ],
+            "other": [
+                "* A filesystem filter which exposes the protected method * {@link #listLocatedStatus(Path, PathFilter)}."
+            ]
+        },
+        "qwen2.5-14b-instruct-mlx": {
+            "summary": [
+                "Test getFileStatus and related listing operations.",
+                "Accept everything.",
+                "Accept nothing.",
+                "Path filter which only expects paths whose final name element equals the {@code match} field.",
+                "A filesystem filter which exposes the protected method {@link #listLocatedStatus(Path, PathFilter)}."
+            ],
+            "rationale": [
+                "the tree parameters. Kept small to avoid killing object store test runs too much."
+            ],
+            "pointer": [
+                "{@link #listLocatedStatus(Path, PathFilter)}."
+            ]
+        },
+        "meta-llama-3.1-8b-instruct": {
+            "summary": [
+                "Test getFileStatus and related listing operations.",
+                "A filesystem filter which exposes the protected method"
+            ],
+            "usage": [
+                "Accept everything.",
+                "Accept nothing."
+            ],
+            "pointer": [
+                " {@code match} ",
+                "{@link #listLocatedStatus(Path, PathFilter)}"
+            ],
+            "other": [
+                "Kept small to avoid killing object store test runs too much."
+            ]
+        }
+    },
+    "AbstractFSContract.java": {
+        "phi-4": {
+            "summary": [
+                "* Class representing a filesystem contract that a filesystem implementation is expected implement."
+            ],
+            "expand": [
+                "* Part of this contract class is to allow FS implementations to provide specific opt outs and limits, so that tests can be skip unsupported features (e.g. case sensitivity tests), dangerous operations (e.g. trying to delete the root directory), and limit filesize and other numeric variables for scale tests"
+            ],
+            "rationale": [
+                "* Part of this contract class is to allow FS implementations to provide specific opt outs and limits, so that tests can be skip unsupported features (e.g. case sensitivity tests), dangerous operations (e.g. trying to delete the root directory), and limit filesize and other numeric variables for scale tests"
+            ],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        },
+        "qwen2.5-14b-instruct-mlx": {
+            "summary": [
+                "Class representing a filesystem contract that a filesystem implementation is expected to implement."
+            ],
+            "expand": [
+                "Part of this contract class is to allow FS implementations to provide specific opt outs and limits, so that tests can be skip unsupported features (e.g. case sensitivity tests), dangerous operations (e.g. trying to delete the root directory), and limit filesize and other numeric variables for scale tests."
+            ]
+        },
+        "meta-llama-3.1-8b-instruct": {
+            "summary": [
+                "Class representing a filesystem contract that a filesystem implementation is expected implement."
+            ],
+            "other": [
+                "The goal of this contract class."
+            ]
+        }
+    },
+    "AbstractS3ACommitterFactory.java": {
+        "phi-4": {
+            "summary": [
+                "Dynamically create the output committer based on subclass type and settings."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        },
+        "qwen2.5-14b-instruct-mlx": {
+            "summary": [
+                "* Dynamically create the output committer based on subclass type and settings."
+            ]
+        },
+        "meta-llama-3.1-8b-instruct": {
+            "summary": [
+                "Dynamically create the output committer based on subclass type and settings."
+            ]
+        }
+    },
+    "AbstractTFLaunchCommandTestHelper.java": {
+        "phi-4": {
+            "summary": [
+                "This class is an abstract base class for testing Tensorboard and TensorFlow launch commands."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "ApplicationConstants.java": {
+        "phi-4": {
+            "summary": [
+                "This is the API for the applications comprising of constants that YARN sets up for the applications and the containers."
+            ],
+            "rationale": [
+                "TODO: Investigate the semantics and security of each cross-boundary refs."
+            ],
+            "usage": [
+                "The type of launch for the container.",
+                "Environment for Applications."
+            ],
+            "other": [
+                "Some of the environment variables for applications are <em>final</em> i.e. they cannot be modified by the applications."
+            ]
+        }
+    },
+    "ApplicationStateData.java": {
+        "phi-4": {
+            "summary": [
+                "* Contains all the state data that needs to be stored persistently * for an Application"
+            ],
+            "other": []
+        }
+    },
+    "AutoInputFormat.java": {
+        "phi-4": {
+            "summary": [
+                "* An {@link InputFormat} that tries to deduce the types of the input files"
+            ],
+            "pointer": [
+                "* automatically. It can currently handle text and sequence files."
+            ]
+        }
+    },
+    "BalancingPolicy.java": {
+        "phi-4": {
+            "summary": [
+                "* Balancing policy."
+            ],
+            "expand": [
+                "Since a datanode may contain multiple block pools,"
+            ],
+            "rationale": [
+                "{@link Pool} implies {@link Node}\", \"but NOT the other way around\""
+            ],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "{@link Pool}",
+                "{@link Node}"
+            ],
+            "other": [
+                "* Cluster is balanced if each node is balanced.",
+                "* Cluster is balanced if each pool in each node is balanced."
+            ]
+        }
+    },
+    "BaseRouterWebServicesTest.java": {
+        "phi-4": {
+            "summary": [
+                "* Base class for all the RouterRMAdminService test cases. It provides utility",
+                "* methods that can be used by the concrete test case classes."
+            ],
+            "other": [
+                "\"]}The segment of the comment labeled as ",
+                " falls under the summary category because it describes what the code does: serving as a base class providing utility methods for test cases. The remaining segment, consisting of only line breaks, does not fit any category and is classified as ",
+                ". This reflects its role as a separator rather than providing specific information or fulfilling any functional role within the taxonomy. None of the other categories (expand, rationale, deprecation, usage, ownership, pointer) apply to this comment, as there is no detailed explanation, reasoning provided for design choices, mentions of deprecated features, usage examples or instructions, authorship details, external references, or any other content that would fit those descriptions. Therefore, the comment is primarily a concise description of purpose and function with no additional content to warrant further classification. It succinctly conveys the ",
+                " of the code segment it describes, fitting cleanly into the summary category. The line breaks are simply formatting and do not carry additional meaning or content relevant to the categories described, resulting in their classification as ",
+                ". This approach ensures that each segment of text is assigned the most appropriate category based on its content and purpose, adhering to the instructions that no segment should be classified into more than one category. If a portion of text does not fit any specific category, it defaults to ",
+                " as indicated by the guidelines. This systematic classification helps in understanding and categorizing comments in source code effectively, aiding developers or tools that might automate documentation or analysis processes based on these comments. By distinguishing between a summary and other potential categories, the classification highlights the primary intent of the comment as providing an overview or introduction to the code's purpose, which can be particularly useful for newcomers to the codebase or during maintenance phases when understanding the high-level architecture and design decisions is crucial. This methodical approach to comment classification not only enhances clarity and communication within the codebase but also supports best practices in software documentation, ensuring that comments are meaningful, accessible, and categorized appropriately for their intended audience or use case. The classification of comments into distinct categories like summary, rationale, deprecation, and so forth facilitates a structured understanding of the code's narrative - from what it does (summary), why certain paths were chosen (rationale), to how it should be used or avoided (usage, deprecation). This structured approach aids in navigating complex codebases, providing developers with a clearer understanding of both the macro and micro aspects of the software's design and functionality. Moreover, by categorizing comments in such a detailed manner, it becomes easier to update, refactor, or extend the codebase with a clear understanding of the existing infrastructure and intended practices highlighted through these categorized comments. This not only improves code readability but also enhances maintainability, making it easier for future developers to grasp existing functionalities and their purposes, rationale behind specific implementations, or recognize deprecated features that should be avoided in favor of newer options. In summary, this detailed classification and the systematic approach to categorizing comments serve as a foundational practice in software development, promoting better documentation, understanding, and ultimately leading to more robust, maintainable, and user-friendly software products. By adhering to these categories, developers ensure that each comment serves a specific purpose within the codebase, contributing to an overall strategy for effective communication and documentation within software development projects. This contributes to a culture of clarity, precision, and comprehensiveness in coding practices, encouraging developers to approach code documentation with the same level of rigor as they do the code itself. In turn, this helps in creating a more professional and accessible codebase, where information is readily available and understandable to both current team members and future contributors or maintainers. Moreover, such a disciplined approach to comment categorization can significantly aid in automated processes like generating documentation or conducting static code analysis, where accurately categorized comments can be used to extract meaningful insights about the software\u2019s design and usage patterns without manual interpretation. This further underscores the importance of categorizing comments in a detailed, methodical manner as part of best practices in software development and documentation, contributing to enhanced efficiency, clarity, and utility for all stakeholders involved in the lifecycle of a software product. Therefore, by classifying this particular comment as primarily a summary with an additional ",
+                " segment for formatting purposes, we adhere to the guidelines provided and contribute to a clearer, more structured approach to understanding and documenting code functionalities and design rationales. This, in turn, supports effective communication, documentation, and maintenance practices within the software development process, ensuring that codebases are not only functional but also well-understood and accessible to those who work with them now and in the future. Thus, through this detailed analysis and classification process, we not only address the specific task at hand but also reinforce and exemplify the broader principles of clarity, precision, and purposefulness in software documentation and coding practices. These are crucial for fostering a more professional, efficient, and user-friendly development environment that benefits developers, users, and stakeholders alike, making it an indispensable aspect of modern software engineering. In conclusion, the classification process not only serves its immediate purpose of categorizing a specific comment but also acts as a practical demonstration of best practices in software documentation, highlighting the importance of thoughtful, structured comment categorization as a key component of effective software development and maintenance strategies. This approach underscores the value of each comment within the codebase, not just as a piece of text but as an integral part of the software's documentation and understanding framework, which is essential for its ongoing success and evolution. Ultimately, by categorizing comments with such care and attention to detail, we contribute to a more organized, comprehensible, and maintainable codebase, laying the groundwork for successful software development projects that meet and exceed the expectations of their users and developers alike. This not only facilitates better software products but also enhances the overall development experience, promoting a culture of excellence and precision in coding and documentation practices that benefits the entire software industry. In essence, this detailed classification exemplifies a commitment to quality and clarity in software development, reinforcing the critical role of effective documentation and communication strategies in achieving outstanding results and fostering a productive, collaborative development environment. Through this lens, the task of classifying code comments transcends its immediate practical application, embodying a broader commitment to professionalism, excellence, and innovation in software engineering. This level of dedication to documentation quality reflects a deep understanding of the significance of clear, precise communication in software development and the profound impact it can have on the success and sustainability of software projects, making it a fundamental aspect of responsible and effective software engineering practices. In summary, the meticulous classification of code comments into distinct categories not only facilitates immediate understanding and use but also contributes to a larger culture of excellence in software development, underscoring the indispensable role of thoughtful documentation and communication strategies in creating successful, impactful software solutions. This approach exemplifies the best practices in software engineering, demonstrating how a focus on clarity, precision, and purposefulness can lead to more robust, maintainable, and user-friendly software products, ultimately enhancing the development experience for all involved and advancing the state of the art in software engineering. Therefore, by carefully categorizing this comment as primarily ",
+                " with a portion designated as ",
+                " we not only address the task at hand but also reinforce and contribute to these broader principles of excellence in software development, highlighting the critical importance of detailed, structured comment categorization as a cornerstone of effective software documentation and design strategies. This not only aids in the practical task of understanding and using the code more effectively but also supports a culture of professionalism, clarity, and precision that is essential for achieving outstanding results in software development projects, making it a vital component of modern software engineering practices. Ultimately, this detailed approach to comment classification serves as both a practical tool for improving code documentation and an exemplar of best practices in software development, reflecting a deep commitment to quality, clarity, and purposefulness that is fundamental to creating successful software products and fostering a productive, innovative development environment. Through this lens, the work of classifying code comments becomes an integral part of a larger effort to advance software engineering practices, contributing to the ongoing evolution and refinement of methodologies that support excellence in software development. This not only benefits individual projects but also enriches the broader field of software engineering, promoting a culture of continuous improvement and innovation that drives progress in creating more effective, efficient, and user-friendly software solutions. In this way, the task of categorizing code comments transcends its immediate context to play a pivotal role in shaping the future of software development, embodying the principles and practices that will define successful software engineering in years to come. Thus, by engaging in this detailed classification process, we not only fulfill our immediate responsibilities but also participate in a larger movement towards excellence and innovation in software development, contributing to the advancement of best practices that will benefit developers, users, and stakeholders alike for years to come. This underscores the significant impact of thoughtful documentation and communication strategies in software engineering, highlighting their crucial role in achieving outstanding outcomes and fostering a vibrant, forward-looking development community that is well-equipped to meet the challenges and opportunities of the future. Through this dedicated approach to comment classification, we not only enhance the clarity and utility of individual code comments but also support a broader commitment to quality, professionalism, and innovation in software development, underscoring the vital importance of effective documentation practices in creating successful, impactful software products that meet and exceed the expectations of users and developers alike. Ultimately, this meticulous attention to detail in categorizing code comments exemplifies the principles of best practices in software engineering, reinforcing the significance of clear, purposeful communication and documentation as foundational elements of successful software development projects. By embodying these values in our work, we contribute to the ongoing evolution of software engineering practices, helping to shape a future where quality, clarity, and precision are paramount in creating exceptional software solutions that advance the field and enrich the experiences of all those who engage with them. Therefore, this careful classification process not only serves its immediate purpose but also acts as a beacon of excellence in software development, inspiring ongoing efforts to refine and enhance documentation practices that are essential for achieving the highest standards in software engineering. This commitment to quality, clarity, and purposefulness in comment categorization reflects a deep understanding of its importance in fostering successful software development projects, highlighting the role of effective documentation and communication strategies in creating robust, maintainable, and user-friendly software products. Through this lens, the task of classifying code comments becomes a critical component of a broader strategy to promote excellence in software engineering, contributing to the development of more effective, efficient, and user-centric software solutions that meet the diverse needs and expectations of users and developers alike. In this way, by approaching comment classification with care and attention to detail, we not only improve the immediate usability of code comments but also support a larger vision for software development that prioritizes quality, clarity, and innovation, making a meaningful contribution to the advancement of best practices in software engineering. This approach exemplifies the values and principles that underpin successful software development, demonstrating how a focus on meticulous documentation and communication can lead to outstanding results in creating impactful, high-quality software products. Ultimately, this detailed classification process underscores the critical importance of thoughtful documentation and communication strategies in software engineering, highlighting their role in achieving excellence and fostering a productive, innovative development environment that benefits developers, users, and the broader software industry alike. In doing so, it reinforces the significance of engaging in best practices for comment categorization as a key component of effective software development, contributing to the creation of robust, maintainable, and user-friendly software products that advance the field and enrich the experiences of all those who interact with them. Thus, by embodying these principles in our work, we not only enhance the quality and clarity of individual code comments but also contribute to a larger effort to promote excellence, innovation, and professionalism in software development, playing a vital role in shaping the future of the industry and ensuring that it continues to thrive and meet the evolving needs of users and developers around the world. Through this dedicated approach, we not only fulfill our immediate responsibilities but also participate in a broader movement towards quality and innovation in software engineering, supporting the ongoing development of best practices that will define successful software projects for years to come. This not only benefits individual developers and teams but also enriches the entire software development community, promoting a culture of excellence that drives progress and innovation in creating more effective, efficient, and user-friendly software solutions. In this way, the task of categorizing code comments transcends its immediate context to become an integral part of a larger effort to advance software engineering practices, contributing to the ongoing refinement and evolution of methodologies that support outstanding outcomes in software development. Thus, by engaging thoughtfully with this process, we not only improve the immediate usability and understanding of code comments but also support a vision for software development that prioritizes clarity, precision, and purposefulness, making a significant contribution to the advancement of best practices in software engineering. This underscores the profound impact that effective documentation and communication strategies can have on the success of software projects, highlighting the essential role they play in fostering a vibrant, innovative development environment that is well-equipped to meet the challenges and opportunities of the future. Through this commitment to quality, clarity, and innovation in comment categorization, we not only enhance the utility of individual code comments but also contribute to a broader effort to promote excellence and professionalism in software development, supporting the creation of exceptional software products that advance the field and enrich the experiences of developers and users alike. Ultimately, this meticulous attention to detail in classifying comments reflects a deep appreciation for the critical role of documentation and communication strategies in software engineering, underscoring their importance in achieving outstanding results and fostering a productive, forward-looking development community that is committed to continuous improvement and innovation in creating more effective, efficient, and user-friendly software solutions. Therefore, by approaching this task with care and a focus on best practices, we not only fulfill our immediate responsibilities but also contribute to a larger vision for software development that prioritizes quality, clarity, and purposefulness, making a meaningful impact on the industry and supporting the ongoing evolution of methodologies that define successful software engineering practices. In this way, the detailed classification of code comments becomes a key component of a broader commitment to excellence in software development, exemplifying the values and principles that underpin effective documentation and communication strategies as foundational elements of creating outstanding software products. Through this lens, our work on categorizing code comments not only serves its immediate purpose but also plays a vital role in advancing the field of software engineering, promoting best practices that enhance the quality, clarity, and usability of software products for developers and users alike. This not only benefits individual projects but also enriches the broader software development community, fostering a culture of innovation and professionalism that drives progress in creating more effective, efficient, and user-centric software solutions. Thus, by embracing this approach to comment classification with care and attention to detail, we not only improve the immediate usability of code comments but also support a larger vision for software development that prioritizes excellence, innovation, and clarity, contributing to the ongoing refinement and evolution of best practices in software engineering that define successful projects and advance the field. In this way, our efforts to categorize code comments with precision and purposefulness embody a commitment to quality and professionalism in software development, highlighting the critical importance of effective documentation and communication strategies in achieving outstanding outcomes and fostering a vibrant, forward-looking development environment that benefits developers, users, and the software industry as a whole. By engaging thoughtfully with this task, we not only fulfill our immediate responsibilities but also participate in a broader movement towards excellence and innovation in software engineering, supporting the development of best practices that will shape the future of the field and ensure its continued success in meeting the diverse needs and expectations of users and developers around the world. Ultimately, this careful approach to comment classification exemplifies the best practices in software engineering, reinforcing the significance of clear, purposeful communication and documentation as foundational elements of successful software development projects. Through this dedicated effort, we not only enhance the quality and clarity of individual code comments but also contribute to a larger effort to promote professionalism, innovation, and excellence in software development, playing a vital role in advancing the field and supporting the creation of exceptional software products that meet and exceed the expectations of those who engage with them, enriching the experiences of developers and users alike. Thus, by embodying these principles in our work on categorizing code comments, we not only improve their immediate usability and understanding but also support a broader vision for software development that prioritizes quality, clarity, and purposefulness, making a meaningful contribution to the advancement of best practices in software engineering that will define successful projects and shape the future of the industry for years to come.,"
+            ]
+        }
+    },
+    "BatchedRequests.java": {
+        "phi-4": {
+            "summary": [
+                "A grouping of Scheduling Requests which are sent to the PlacementAlgorithm"
+            ],
+            "expand": [],
+            "rationale": [
+                "The placement algorithm tends to give more optimal placements if more requests are batched together."
+            ],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "PlacementAlgorithmOutput attempt - the number of times the requests in this| Iterator Type."
+            ],
+            "other": []
+        }
+    },
+    "BlockPlacementStatusWithNodeGroup.java": {
+        "phi-4": {
+            "summary": [],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "An implementation of @see BlockPlacementStatus for \\\\(references `BlockPlacementStatus`);",
+                "@see BlockPlacementPolicyWithNodeGroup \\(references `BlockPlacementPolicyWithNodeGroup`);"
+            ],
+            "other": []
+        }
+    },
+    "BlocksMap.java": {
+        "phi-4": {
+            "summary": [
+                "This class maintains the map from a block to its metadata."
+            ],
+            "expand": [
+                "block's metadata currently includes blockCollection it belongs to and the datanodes that store the block."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "BlockUtils.java": {
+        "phi-4": {
+            "summary": [
+                "Utils functions to help block functions."
+            ],
+            "other": []
+        }
+    },
+    "ByteArrayEncodingState.java": {
+        "phi-4": {
+            "summary": [
+                "* A utility class that maintains encoding state during an encode call using"
+            ],
+            "usage": [
+                "* byte array inputs."
+            ]
+        }
+    },
+    "CapacitySchedulerPlanFollower.java": {
+        "phi-4": {
+            "summary": [
+                "* This class implements a {@link PlanFollower}. This is invoked on a timer, and it is in charge to publish the state of the {@link Plan}s to the underlying {@link CapacityScheduler}. This implementation does so, by adding/removing/resizing leaf queues in the scheduler, thus affecting the dynamic behavior of the scheduler in a way that is consistent with the content of the plan. It also updates the plan's view on how much resources are available in the cluster."
+            ],
+            "expand": [
+                "* This implementation of PlanFollower is relatively stateless, and it can synchronize schedulers and Plans that have arbitrary changes (performing set differences among existing queues). This makes it resilient to frequency of synchronization, and RM restart issues (no \"catch up\" is necessary)."
+            ],
+            "rationale": [
+                "* This implementation does so, by adding/removing/resizing leaf queues in the scheduler, thus affecting the dynamic behavior of the scheduler in a way that is consistent with the content of the plan."
+            ]
+        }
+    },
+    "Classpath.java": {
+        "phi-4": {
+            "summary": [
+                "Command-line utility for getting the full classpath needed to launch a Hadoop client application."
+            ],
+            "expand": [
+                "If the hadoop script is called with \"classpath\" as the command, then it simply prints the classpath and exits immediately without launching a JVM. The output likely will include wildcards in the classpath.",
+                "If there are arguments passed to the classpath command, then this class gets called. With the --glob argument, it prints the full classpath with wildcards expanded. This is useful in situations where wildcard syntax isn't usable.",
+                "With the --jar argument, it writes the classpath as a manifest in a jar file. This is useful in environments with short limitations on the maximum command line length, where it may not be possible to specify the full classpath in a command."
+            ],
+            "rationale": [
+                "For example, the maximum command line length on Windows is 8191 characters."
+            ],
+            "deprecation": [],
+            "usage": [
+                "With the --glob argument, it prints the full classpath with wildcards expanded.",
+                "With the --jar argument, it writes the classpath as a manifest in a jar file."
+            ],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "ComparableVersion.java": {
+        "phi-4": {
+            "summary": [
+                "Generic implementation of version comparison."
+            ],
+            "rationale": [
+                "* Features:\",\" * \"mixing of '<code>-</code>' (dash) and '<code>.</code>' (dot) separators,\" * \"transition between characters and digits also constitutes a separator: <code>1.0alpha1 => [1, 0, alpha, 1]</code>\",\" * \"unlimited number of version components,\" * \"version components in the text can be digits or strings,\" * \"strings are checked for well-known qualifiers and the qualifier ordering is used for version ordering. Well-known qualifiers (case insensitive) are:\",\" * \"<code>alpha</code> or <code>a</code>\",\" * \"<code>beta</code> or <code>b</code>\",\" * \"<code>milestone</code> or <code>m</code>\",\" * \"<code>rc</code> or <code>cr</code>\",\" * \"<code>snapshot</code>\",\" * \"<code>(the empty string)</code> or <code>ga</code> or <code>final</code>\",\" * \"<code>sp</code>\",\" * \"Unknown qualifiers are considered after known qualifiers, with lexical order (always case insensitive),\",\" * \"a dash usually precedes a qualifier, and is always less important than something preceded with a dot.\""
+            ],
+            "usage": [
+                "@see <a href=\"https://cwiki.apache.org/confluence/display/MAVENOLD/Versioning\">\"Versioning\" on Maven Wiki</a>"
+            ],
+            "pointer": [
+                "* \"Represents a numeric item in the version item list.\"",
+                "* \"Represents a string in the version item list, usually a qualifier.\",\" * \"Represents a version list item. This class is used both for the global item list and for sub-lists (which start with '-(number)' in the version specification).\""
+            ],
+            "other": [
+                "Code source of this file:| http://grepcode.com/file/repo1.maven.org/maven2/| org.apache.maven/maven-artifact/3.1.1/| org/apache/maven/artifact/versioning/ComparableVersion.java/|| Modifications made on top of the source:\" * \"1. Changed package org.apache.maven.artifact.versioning; to package org.apache.hadoop.util; * \"2. Removed author tags to clear hadoop author tag warning\"]} Note: The segments classified as ",
+                "rationale",
+                " and ",
+                "pointer"
+            ]
+        }
+    },
+    "ConfigurationException.java": {
+        "phi-4": {
+            "summary": [
+                "Exception to throw in case of a configuration problem."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "ContainerFinishData.java": {
+        "phi-4": {
+            "summary": [
+                "The class contains the fields that can be determined when"
+            ],
+            "expand": [
+                "<code>RMContainer</code> finishes, and that need to be stored persistently."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "<code>RMContainer</code>"
+            ],
+            "other": []
+        }
+    },
+    "CpuTimeTracker.java": {
+        "phi-4": {
+            "summary": [
+                "Utility for sampling and computing CPU usage."
+            ]
+        }
+    },
+    "DBProfile.java": {
+        "phi-4": {
+            "summary": [],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [
+                "Most tuning parameters are based on this URL."
+            ],
+            "ownership": [],
+            "pointer": [
+                "https://github.com/facebook/rocksdb/blob/master/include/rocksdb/options.h",
+                "https://github.com/facebook/rocksdb/wiki/Setup-Options-and-Basic-Tuning"
+            ],
+            "other": [
+                "* User visible configs based RocksDB tuning page. Documentation for Options."
+            ]
+        }
+    },
+    "DefaultAnonymizingRumenSerializer.java": {
+        "phi-4": {
+            "summary": [
+                "Default Rumen JSON serializer."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "DelegatingSSLSocketFactory.java": {
+        "phi-4": {
+            "summary": [
+                "A {\\@link SSLSocketFactory} that can delegate to various SSL implementations."
+            ],
+            "expand": [
+                "Specifically, either OpenSSL or JSSE can be used. OpenSSL offers better performance than JSSE and is made available via the <a href=\"https://github.com/wildfly/wildfly-openssl\">wildlfy-openssl</a> library.",
+                "The factory has several different modes of operation:\", followed by the list bullet points with detailed descriptions for OpenSSL, Default, Default_JSSE, and Default_JSSE_with_GCM modes."
+            ],
+            "rationale": [
+                "OpenSSL: Uses the wildly-openssl library to delegate to the system installed OpenSSL. If the wildfly-openssl integration is not properly setup, an exception is thrown.",
+                "Default: Attempts to use the OpenSSL mode, if it cannot load the necessary libraries, it falls back to the Default_JSEE mode.",
+                "Default_JSSE: Delegates to the JSSE implementation of SSL, but it disables the GCM cipher when running on Java 8.",
+                "Default_JSSE_with_GCM: Delegates to the JSSE implementation of SSL with no modification to the list of enabled ciphers.",
+                "Default indicates Ordered, preferred OpenSSL, if failed to load then fall back to Default_JSSE. This explains the fallback mechanism.",
+                "Default_JSSE is not truly the default JSSE implementation because the GCM cipher is disabled when running on Java 8. However, the name was not changed in order to preserve backwards compatibility."
+            ],
+            "deprecation": [],
+            "usage": [
+                "The specific modes of operation and fallback mechanisms might imply intended usage, but there are no explicit examples or use cases provided."
+            ],
+            "ownership": [],
+            "pointer": [
+                "<a href=\"https://github.com/wildfly/wildfly-openssl\">wildlfy-openssl</a> library."
+            ],
+            "other": [
+                "This should only be modified within the #initializeDefaultFactory"
+            ]
+        }
+    },
+    "DelegationTokenIdentifier.java": {
+        "phi-4": {
+            "summary": [
+                "* A delegation token identifier that is specific to HDFS."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "DeleteApplicationHomeSubClusterRequest.java": {
+        "phi-4": {
+            "summary": [
+                "The request to <code>Federation state store</code> to delete the mapping of"
+            ],
+            "rationale": [
+                "home subcluster of a submitted application."
+            ]
+        }
+    },
+    "DFSConfigKeys.java": {
+        "phi-4": {
+            "summary": [
+                "This class contains constants for configuration keys and default values"
+            ],
+            "other": [
+                "used in hdfs."
+            ]
+        }
+    },
+    "DfsServlet.java": {
+        "phi-4": {
+            "summary": [
+                "A base class for the servlets in DFS."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "DiskBalancerCluster.java": {
+        "phi-4": {
+            "summary": [
+                "* DiskBalancerCluster represents the nodes that we are working against."
+            ],
+            "rationale": [
+                "Semantics of inclusionList and exclusionLists.",
+                "* If a non-empty inclusionList is specified then the diskBalancer assumes that",
+                "* the user is only interested in processing that list of nodes. This node list",
+                "* is checked against the exclusionList and only the nodes in inclusionList but",
+                "* not in exclusionList is processed.",
+                "* if inclusionList is empty, then we assume that all live nodes in the nodes is",
+                "* to be processed by diskBalancer. In that case diskBalancer will avoid any",
+                "* nodes specified in the exclusionList but will process all nodes in the",
+                "* cluster.",
+                "* In other words, an empty inclusionList is means all the nodes otherwise",
+                "* only a given list is processed and ExclusionList is always honored."
+            ]
+        }
+    },
+    "DistributedSchedulingAllocateRequest.java": {
+        "phi-4": {
+            "summary": [
+                "Object used by the Application Master when distributed scheduling is enabled,"
+            ],
+            "expand": [
+                "in order to forward the {@link AllocateRequest} for GUARANTEED containers to the Resource Manager, and to notify the Resource Manager about the allocation of OPPORTUNISTIC containers through the Distributed Scheduler."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "{@link AllocateRequest}"
+            ],
+            "other": []
+        }
+    },
+    "DockerKillCommand.java": {
+        "phi-4": {
+            "summary": [
+                "Encapsulates the docker kill command and its command line arguments."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "EditLogTailer.java": {
+        "phi-4": {
+            "summary": [
+                "EditLogTailer represents a thread which periodically reads from edits journals and applies the transactions contained within to a given FSNamesystem."
+            ],
+            "expand": [
+                "The thread which does the actual work of tailing edits journals and applying the transactions to the FSNS."
+            ],
+            "rationale": [
+                "We - lazily - get a proxy to one of the configured namenodes and attempt to make the request against it. If it doesn't succeed, either because the proxy failed to be created or the request failed, we try the next NN in the list. We try this up to the configuration maximum number of retries before throwing up our hands. A working proxy is retained across attempts since we expect the active NameNode to switch rarely."
+            ],
+            "pointer": [
+                "We failover across a number of NameNodes, rather than just between an active and a standby."
+            ],
+            "other": [
+                "Manage the 'active namenode proxy'. This cannot just be a single proxy since we could failover across a number of NameNodes, rather than just between an active and a standby."
+            ]
+        }
+    },
+    "ErasureCodingPolicyManager.java": {
+        "phi-4": {
+            "summary": [
+                "This manages erasure coding policies predefined and activated in the system."
+            ],
+            "expand": [
+                "It loads customized policies and syncs with persisted ones in NameNode image."
+            ],
+            "ownership": [
+                "This class is instantiated by the FSNamesystem."
+            ]
+        }
+    },
+    "EventWatcher.java": {
+        "phi-4": {
+            "summary": [
+                "Event watcher will send the tracked payload/event after a timeout period"
+            ],
+            "expand": [
+                "Event watcher the (re)send a message after timeout.",
+                "unless a confirmation from the original event (completion event) is arrived."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [
+                "@param <TIMEOUT_PAYLOAD> The type of the events which are tracked.",
+                "@param <COMPLETION_PAYLOAD> The type of event which could cancel the tracking."
+            ],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "Expression.java": {
+        "phi-4": {
+            "summary": [],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [
+                "* Interface describing an expression to be used in the"
+            ],
+            "ownership": [],
+            "pointer": [
+                "@link org.apache.hadoop.fs.shell.find.Find command."
+            ],
+            "other": []
+        }
+    },
+    "FairOrderingPolicy.java": {
+        "phi-4": {
+            "summary": [
+                "An OrderingPolicy which orders SchedulableEntities for fairness (see FairScheduler, FairSharePolicy), generally, processes with lesser usage are lesser."
+            ],
+            "rationale": [
+                "If sizedBasedWeight is set to true then an application with high demand may be prioritized ahead of an application with less usage. This is to offset the tendency to favor small apps, which could result in starvation for large apps if many small ones enter and leave the queue continuously"
+            ],
+            "usage": [
+                "(optional, default false)"
+            ]
+        }
+    },
+    "FederationPolicyException.java": {
+        "phi-4": {
+            "summary": [
+                "Generic policy exception."
+            ],
+            "other": []
+        }
+    },
+    "FederationProtocolPBTranslator.java": {
+        "phi-4": {
+            "summary": [
+                "Helper class for setting/getting data elements in an object backed by a protobuf implementation."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "FederationStateStoreInvalidInputException.java": {
+        "phi-4": {
+            "summary": [
+                "Exception thrown by the {@code FederationMembershipStateStoreInputValidator},",
+                "{@code FederationApplicationHomeSubClusterStoreInputValidator},"
+            ],
+            "usage": [
+                "thrown by the {@code FederationPolicyStoreInputValidator} if the input is invalid."
+            ]
+        }
+    },
+    "FileSystemApplicationHistoryStore.java": {
+        "phi-4": {
+            "summary": [
+                "* File system implementation of {@link ApplicationHistoryStore}. In this implementation, one application will have just one file in the file system, which contains all the history data of one application, and its attempts and containers."
+            ],
+            "rationale": [
+                "{@link #applicationStarted(ApplicationStartData)} is supposed to be invoked first when writing any history data of one application and it will open a file, while {@link #applicationFinished(ApplicationFinishData)} is supposed to be last writing operation and will close the file."
+            ]
+        }
+    },
+    "FsConstants.java": {
+        "phi-4": {
+            "summary": [
+                "FileSystem related constants."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "GetApplicationHomeSubClusterResponsePBImpl.java": {
+        "phi-4": {
+            "pointer": [
+                "* Protocol buffer based implementation of",
+                "* {link GetApplicationHomeSubClusterResponse}"
+            ]
+        }
+    },
+    "GetNamespaceInfoResponse.java": {
+        "phi-4": {
+            "summary": [
+                "* API response for listing HDFS namespaces present in the state store."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "GetNodesToAttributesResponse.java": {
+        "phi-4": {
+            "summary": [
+                "The response sent by the `ResourceManager` to a client requesting nodes to attributes mapping."
+            ],
+            "pointer": [
+                "@see ApplicationClientProtocol#getNodesToAttributes (GetNodesToAttributesRequest)"
+            ]
+        }
+    },
+    "GetSafeModeRequestPBImpl.java": {
+        "phi-4": {
+            "summary": [
+                "Protobuf implementation of the state store API object"
+            ],
+            "usage": [
+                "GetSafeModeRequest"
+            ]
+        }
+    },
+    "GetSubClusterPolicyConfigurationRequestPBImpl.java": {
+        "phi-4": {
+            "summary": [
+                "Protocol buffer based implementation of"
+            ],
+            "pointer": [
+                "{@link GetSubClusterPolicyConfigurationRequest}"
+            ]
+        }
+    },
+    "HadoopIllegalArgumentException.java": {
+        "phi-4": {
+            "summary": [
+                "Indicates that a method has been passed illegal or invalid argument."
+            ],
+            "rationale": [
+                "This exception is thrown instead of IllegalArgumentException to differentiate the exception thrown in Hadoop implementation from the one thrown in JDK."
+            ]
+        }
+    },
+    "HashResolver.java": {
+        "phi-4": {
+            "summary": [
+                "Order the destinations based on consistent hashing."
+            ]
+        }
+    },
+    "HttpHeaderConfigurations.java": {
+        "phi-4": {
+            "summary": [],
+            "expand": [
+                "Responsible to keep all abfs http headers here."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "IDataLoader.java": {
+        "phi-4": {
+            "summary": [
+                "an IDataLoader loads data on demand"
+            ]
+        }
+    },
+    "InconsistentS3ClientFactory.java": {
+        "phi-4": {
+            "summary": [
+                "* S3 Client factory used for testing with eventual consistency fault injection."
+            ],
+            "rationale": [
+                "This client is for testing <i>only</i>; it is in the production"
+            ],
+            "pointer": [
+                "{@code hadoop-aws} module to enable integration tests to use this just by editing the Hadoop configuration used to bring up the client."
+            ]
+        }
+    },
+    "InfoKeyHandler.java": {
+        "phi-4": {
+            "summary": [
+                "Executes Info Object."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "InvalidContainerRequestException.java": {
+        "phi-4": {
+            "summary": [
+                "Thrown when arguments are combined to construct a <code>AMRMClient.ContainerRequest</code> in an invalid way."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "ITestAbfsReadWriteAndSeek.java": {
+        "phi-4": {
+            "summary": [
+                "Test read, write and seek."
+            ],
+            "rationale": [
+                "Uses package-private methods in AbfsConfiguration, which is why it is in this package."
+            ],
+            "other": []
+        }
+    },
+    "ITestAzureNativeContractSeek.java": {
+        "phi-4": {
+            "summary": [
+                "Contract test."
+            ]
+        }
+    },
+    "ITestCommitOperations.java": {
+        "phi-4": {
+            "summary": [
+                "* Test the low-level binding of the S3A FS to the magic commit mechanism,"
+            ],
+            "expand": [
+                "* and handling of the commit operations."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": [
+                "* This is done with an inconsistent client."
+            ]
+        }
+    },
+    "ITestListPerformance.java": {
+        "phi-4": {
+            "summary": [
+                "Test",
+                "list",
+                "performance."
+            ],
+            "other": []
+        }
+    },
+    "ITestS3Select.java": {
+        "phi-4": {
+            "summary": [
+                "* Test the S3 Select feature with some basic SQL Commands."
+            ],
+            "rationale": [
+                "* Executed if the destination store declares its support for the feature."
+            ]
+        }
+    },
+    "ITestS3SelectCLI.java": {
+        "phi-4": {
+            "summary": [
+                "Test the S3 Select CLI through some operations against landsat and files generated from it."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "KerberosDelegationTokenAuthenticator.java": {
+        "phi-4": {
+            "summary": [
+                "The `<code>KerberosDelegationTokenAuthenticator</code>` provides support for Kerberos SPNEGO authentication mechanism and support for Hadoop Delegation Token operations."
+            ],
+            "expand": [
+                "It falls back to the `{@link PseudoDelegationTokenAuthenticator}` if the HTTP endpoint does not trigger a SPNEGO authentication."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "{@link PseudoDelegationTokenAuthenticator}"
+            ],
+            "other": []
+        }
+    },
+    "LocalizationStatusPBImpl.java": {
+        "phi-4": {
+            "pointer": [
+                "PB Implemenation references a linked resource: {@link LocalizationStatus}"
+            ]
+        }
+    },
+    "LocatedFileStatus.java": {
+        "phi-4": {
+            "summary": [
+                "This class defines a FileStatus that includes a file's block locations."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "LoggedTask.java": {
+        "phi-4": {
+            "summary": [
+                "A {@link LoggedTask} represents a [hadoop] task that is part of a hadoop job. It knows about the [possibly empty] sequence of attempts, its I/O footprint, and its runtime."
+            ],
+            "expand": [
+                "All of the public methods are simply accessors for the instance variables we want to write out in the JSON files."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "{@link LoggedTask}"
+            ],
+            "other": []
+        }
+    },
+    "LogParserUtil.java": {
+        "phi-4": {
+            "pointer": [
+                "* Common utility functions for {@link LogParser}."
+            ]
+        }
+    },
+    "LogWebService.java": {
+        "phi-4": {
+            "summary": [
+                "Support only ATSv2 client only."
+            ],
+            "other": []
+        }
+    },
+    "LRUCacheHashMap.java": {
+        "phi-4": {
+            "summary": [
+                "LRU cache with a configurable maximum cache size and access order."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "MapContext.java": {
+        "phi-4": {
+            "summary": [],
+            "expand": [
+                "The context that is given to the {\\@link Mapper}."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "{@link Mapper}"
+            ],
+            "other": []
+        }
+    },
+    "MetaBlockAlreadyExists.java": {
+        "phi-4": {
+            "summary": [],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": [
+                "* Exception - Meta Block with the same name already exists."
+            ]
+        }
+    },
+    "MetricsCache.java": {
+        "phi-4": {
+            "summary": [
+                "A metrics cache for sinks that don't support sparse updates."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [
+                "Cached record"
+            ],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "NativeBatchProcessor.java": {
+        "phi-4": {
+            "summary": [
+                "* used to create channel, transfer data and command between Java and native"
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "NativeSingleLineParser.java": {
+        "phi-4": {
+            "summary": [
+                "This sample parser will parse the sample log and extract the resource skyline."
+            ],
+            "expand": [
+                "The expected log format is: NormalizedJobName NumInstances SubmitTime StartTime EndTime JobInstanceName memUsage coreUsage."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [
+                "The expected log format is: NormalizedJobName NumInstances SubmitTime StartTime EndTime JobInstanceName memUsage coreUsage."
+            ],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "Nfs3Metrics.java": {
+        "phi-4": {
+            "summary": [
+                "This class is for maintaining the various NFS gateway activity statistics"
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "publishing them through the metrics interfaces."
+            ],
+            "other": []
+        }
+    },
+    "Nfs3Status.java": {
+        "phi-4": {
+            "summary": [
+                "Success or error status is reported in NFS3 responses."
+            ]
+        }
+    },
+    "Node2ObjectsMap.java": {
+        "phi-4": {
+            "summary": [
+                "This data structure maintains the list of containers that is on a datanode."
+            ],
+            "rationale": [
+                "This information is built from the DN container reports."
+            ]
+        }
+    },
+    "NodeUpdateType.java": {
+        "phi-4": {
+            "summary": [
+                "Taxonomy of the <code>NodeState</code> that a <code>Node</code> might transition into."
+            ],
+            "other": []
+        }
+    },
+    "NullOutputFormat.java": {
+        "phi-4": {
+            "summary": [
+                "* Consume all outputs and put them in /dev/null."
+            ],
+            "other": []
+        }
+    },
+    "OMNodeDetails.java": {
+        "phi-4": {
+            "summary": [
+                "This class stores OM node details."
+            ],
+            "other": [
+                "Builder class for OMNodeDetails."
+            ]
+        }
+    },
+    "OpportunisticContainersStatusPBImpl.java": {
+        "phi-4": {
+            "summary": [
+                "* Protocol Buffer implementation of OpportunisticContainersStatus."
+            ]
+        }
+    },
+    "OzoneObj.java": {
+        "phi-4": {
+            "summary": [
+                "Class representing a unique ozone object."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [
+                "Ozone Objects supported for ACL."
+            ],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "Parser.java": {
+        "phi-4": {
+            "summary": [
+                "A class for parsing outputs"
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "PartialOutputCommitter.java": {
+        "phi-4": {
+            "pointer": [
+                "Interface for an {@link org.apache.hadoop.mapreduce.OutputCommitter}"
+            ],
+            "other": [
+                "implementing partial commit of task output, as during preemption."
+            ]
+        }
+    },
+    "PartitionResourcesInfo.java": {
+        "phi-4": {
+            "summary": [
+                "This class represents queue/user resource usage info for a given partition"
+            ]
+        }
+    },
+    "PlanningQuotaException.java": {
+        "phi-4": {
+            "summary": [
+                "This exception is thrown if the user quota is exceeded while accepting or"
+            ],
+            "rationale": [
+                "updating a reservation."
+            ]
+        }
+    },
+    "ProcessIdFileReader.java": {
+        "phi-4": {
+            "summary": [
+                "Helper functionality to read the pid from a file."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "QuasiMonteCarlo.java": {
+        "phi-4": {
+            "summary": [
+                "* A map/reduce program that estimates the value of Pi using a quasi-Monte Carlo (qMC) method.",
+                "* The implementation is discussed below."
+            ],
+            "expand": [
+                "* Arbitrary integrals can be approximated numerically by qMC methods.",
+                "* In this example, we use a qMC method to approximate the integral $I = \\int_S f(x) dx$, where $S=[0,1)^2$ is a unit square, $x=(x_1,x_2)$ is a 2-dimensional point, and $f$ is a function describing the inscribed circle of the square $S$, $f(x)=1$ if $(2x_1-1)^2+(2x_2-1)^2 &lt;= 1$ and $f(x)=0$, otherwise.",
+                "* It is easy to see that Pi is equal to $4I$. So an approximation of Pi is obtained once $I$ is evaluated numerically.",
+                "* Mapper: Generate points in a unit square and then count points inside/outside of the inscribed circle of the square.",
+                "* Reducer: Accumulate points inside/outside results from the mappers. Let numTotal = numInside + numOutside. The fraction numInside/numTotal is a rational approximation of the value (Area of the circle)/(Area of the square) = $I$, where the area of the inscribed circle is Pi/4 and the area of unit square is 1. Finally, the estimated value of Pi is 4(numInside/numTotal).",
+                "* | 2-dimensional Halton sequence {H(i)}, where H(i) is a 2-dimensional point and i >= 1 is the index. Halton sequence is used to generate sample points for Pi estimation.",
+                "* Mapper class for Pi estimation. Generate points in a unit square and then count points inside/outside of the inscribed circle of the square.",
+                "* Reducer class for Pi estimation. Accumulate points inside/outside results from the mappers."
+            ],
+            "rationale": [
+                "* We emphasize numerical approximation of arbitrary integrals in this example."
+            ],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "* There are better methods for computing Pi. We emphasize numerical approximation of arbitrary integrals in this example.",
+                "* For computing many digits of Pi, consider using bbp."
+            ],
+            "other": [
+                "*"
+            ]
+        }
+    },
+    "Query.java": {
+        "phi-4": {
+            "summary": [
+                "Check if a record matches a query. The query is usually a partial record."
+            ],
+            "usage": [
+                "@param <T> Type of the record to query."
+            ]
+        }
+    },
+    "QueueName.java": {
+        "phi-4": {
+            "summary": [
+                "* Represents a queue name."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "RandomKeyGenerator.java": {
+        "phi-4": {
+            "summary": [
+                "Data generator tool to generate as much keys as possible."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [
+                "Wrapper to hold ozone keyValidate entry."
+            ],
+            "ownership": [],
+            "pointer": [],
+            "other": [
+                "Validates the write done in ozone cluster."
+            ]
+        }
+    },
+    "ReencryptionUpdater.java": {
+        "phi-4": {
+            "summary": [
+                "Class for finalizing re-encrypt EDEK operations, by updating file xattrs with edeks returned from reencryption.",
+                "Class to track re-encryption submissions of a single zone. It contains all the submitted futures, and statistics about how far the futures are processed.",
+                "Class representing the task for one batch of a re-encryption command. It also contains statistics about how far this single batch has been executed.",
+                "Class that encapsulates re-encryption details of a file."
+            ],
+            "expand": [],
+            "rationale": [
+                "It is assumed only 1 Updater will be running, since updating file xattrs requires namespace write lock, and performance gain from multi-threading is limited."
+            ],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "RegistryInternalConstants.java": {
+        "phi-4": {
+            "summary": [
+                "Internal constants for the registry.",
+                "These are the things which aren't visible to users."
+            ],
+            "rationale": [
+                "Internal constants for the registry. These are the things which aren't visible to users."
+            ]
+        }
+    },
+    "RegistryOperations.java": {
+        "phi-4": {
+            "summary": [
+                "Registry Operations"
+            ]
+        }
+    },
+    "ReInitializeContainerRequestPBImpl.java": {
+        "phi-4": {
+            "pointer": [
+                "CHECKSTYLE:OFF"
+            ]
+        }
+    },
+    "ResourceBlacklistRequest.java": {
+        "phi-4": {
+            "summary": [
+                "* {@link ResourceBlacklistRequest} encapsulates the list of resource-names * which should be added or removed from the <em>blacklist</em> of resources * for the application."
+            ],
+            "pointer": [
+                "* @see ResourceRequest",
+                "* @see ApplicationMasterProtocol#allocate(org.apache.hadoop.yarn.api.protocolrecords.AllocateRequest)"
+            ]
+        }
+    },
+    "ResourceRequestsJsonVerifications.java": {
+        "phi-4": {
+            "summary": [
+                "Performs value verifications on"
+            ],
+            "pointer": [
+                "{@link org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ResourceRequestInfo}",
+                "{@link ResourceRequest}"
+            ],
+            "other": [
+                "objects against the values of",
+                "With the help of the",
+                "{@link Builder}, users can also make verifications of the custom resource types and its values."
+            ]
+        }
+    },
+    "RetriableDirectoryCreateCommand.java": {
+        "phi-4": {
+            "summary": [
+                "This class extends Retriable command to implement the creation of directories"
+            ],
+            "expand": [],
+            "rationale": [
+                "with retries on failure."
+            ],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "RMAdminRequestInterceptor.java": {
+        "phi-4": {
+            "summary": [
+                "Defines the contract to be implemented by the request intercepter classes,"
+            ],
+            "expand": [
+                "that can be used to intercept and inspect messages sent from the client to",
+                "the resource manager."
+            ]
+        }
+    },
+    "RSLegacyRawErasureCoderFactory.java": {
+        "phi-4": {
+            "summary": [
+                "* A raw coder factory for the legacy raw Reed-Solomon coder in Java."
+            ],
+            "other": []
+        }
+    },
+    "SafeModeException.java": {
+        "phi-4": {
+            "summary": [
+                "* This exception is thrown when the name node is in safe mode."
+            ],
+            "rationale": [
+                "Client cannot modified namespace until the safe mode is off."
+            ]
+        }
+    },
+    "SchedulerQueueManager.java": {
+        "phi-4": {
+            "summary": [],
+            "expand": [
+                "Context of the Queues in Scheduler."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "SequenceFileRecordReader.java": {
+        "phi-4": {
+            "pointer": [
+                "An {@link RecordReader} for {@link SequenceFile}s."
+            ]
+        }
+    },
+    "ShellBasedUnixGroupsMapping.java": {
+        "phi-4": {
+            "summary": [
+                "A simple shell-based implementation of {@link GroupMappingServiceProvider}"
+            ],
+            "expand": [
+                "that exec's the <code>groups</code> shell command to fetch the group memberships of a given user."
+            ]
+        }
+    },
+    "StandardSocketFactory.java": {
+        "phi-4": {
+            "summary": [
+                "Specialized SocketFactory to create sockets with a SOCKS proxy"
+            ]
+        }
+    },
+    "StateStoreFileSystemImpl.java": {
+        "phi-4": {
+            "summary": [
+                "* {@link StateStoreDriver} implementation based on a filesystem."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [
+                "The common implementation uses HDFS as a backend. The path can be specified setting dfs.federation.router.driver.fs.path=hdfs://host:port/path/to/store."
+            ],
+            "ownership": [],
+            "pointer": [
+                "* {@link StateStoreDriver} implementation..."
+            ],
+            "other": []
+        }
+    },
+    "StreamBaseRecordReader.java": {
+        "phi-4": {
+            "summary": [
+                "Shared functionality for hadoopStreaming formats."
+            ],
+            "expand": [
+                "A custom reader can be defined to be a RecordReader with the constructor below and is selected with the option bin/hadoopStreaming -inputreader ..."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [
+                "is selected with the option bin/hadoopStreaming -inputreader ..."
+            ],
+            "ownership": [],
+            "pointer": [
+                "@see StreamXmlRecordReader"
+            ],
+            "other": []
+        }
+    },
+    "StructureGenerator.java": {
+        "phi-4": {
+            "summary": [
+                "This program generates a random namespace structure with the following constraints:"
+            ],
+            "expand": [
+                "1. The number of subdirectories is a random number in [minWidth, maxWidth].",
+                "2. The maximum depth of each subdirectory is a random number * [2*maxDepth/3, maxDepth].",
+                "3. Files are randomly placed in the empty directories. The size of each file follows Gaussian distribution.",
+                "The generated namespace structure is described by two files in the output directory. Each line of the first file contains the full name of a leaf directory. Each line of the second file contains the full name of a file and its size, separated by a blank."
+            ],
+            "usage": [
+                "The synopsis of the command is java StructureGenerator",
+                "-maxDepth <maxDepth> : maximum depth of the directory tree; default is 5.",
+                "-minWidth <minWidth> : minimum number of subdirectories per directories; default is 1",
+                "-maxWidth <maxWidth> : maximum number of subdirectories per directories; default is 5",
+                "-numOfFiles <#OfFiles> : the total number of files; default is 10.",
+                "-avgFileSize <avgFileSizeInBlocks>: average size of blocks; default is 1.",
+                "-outDir <outDir>: output directory; default is the current directory.",
+                "-seed <seed>: random number generator seed; default is the current time."
+            ],
+            "other": [
+                "| In memory representation of a directory | In memory representation of a file"
+            ]
+        }
+    },
+    "SwiftBadRequestException.java": {
+        "phi-4": {
+            "rationale": [
+                "* Thrown to indicate that data locality can't be calculated or requested path is incorrect.",
+                "* Data locality can't be calculated if Openstack Swift version is old."
+            ]
+        }
+    },
+    "SwiftRestClient.java": {
+        "phi-4": {
+            "summary": [
+                "* This implements the client-side of the Swift REST API."
+            ],
+            "expand": [
+                "* The core actions put, get and query data in the Swift object store,\", \" after authenticating the client.\"], "
+            ]
+        }
+    },
+    "TableConfig.java": {
+        "phi-4": {
+            "summary": [
+                "Class that maintains Table Configuration."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "TestAddBlock.java": {
+        "phi-4": {
+            "summary": [
+                "Test AddBlockOp is written and read correctly"
+            ],
+            "other": []
+        }
+    },
+    "TestAdlContractDeleteLive.java": {
+        "phi-4": {
+            "summary": [
+                "Test delete contract test."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "TestAdlContractSeekLive.java": {
+        "phi-4": {
+            "summary": [
+                "Test seek operation on Adl file system."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "TestConfServlet.java": {
+        "phi-4": {
+            "summary": [
+                "Basic test case that the ConfServlet can write configuration"
+            ],
+            "expand": [
+                "to its output in XML and JSON format."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "TestConnCache.java": {
+        "phi-4": {
+            "summary": [
+                "This class tests the client connection caching in a single node mini-cluster."
+            ],
+            "other": []
+        }
+    },
+    "TestCustomOauthTokenProvider.java": {
+        "phi-4": {
+            "summary": [
+                "Test custom OAuth token providers."
+            ],
+            "rationale": [
+                "This is a unit test not an E2E integration test because that would require OAuth auth setup, always."
+            ],
+            "usage": [
+                "Instead this just checks that the creation works and that everything is propagated."
+            ]
+        }
+    },
+    "TestDataDrivenDBInputFormat.java": {
+        "phi-4": {
+            "summary": [
+                "* Test aspects of DataDrivenDBInputFormat"
+            ],
+            "usage": [],
+            "other": [
+                "import org.apache.hadoop.examples.DBCountPageView;"
+            ]
+        }
+    },
+    "TestDominantResourceFairnessPolicy.java": {
+        "phi-4": {
+            "summary": [
+                "comparator.compare(sched1, sched2) < 0 means that sched1 should get a"
+            ],
+            "usage": [
+                "container before sched2"
+            ]
+        }
+    },
+    "TestEditLogFileOutputStream.java": {
+        "phi-4": {
+            "summary": [
+                "Test the EditLogFileOutputStream"
+            ],
+            "other": []
+        }
+    },
+    "TestFederationPolicyUtils.java": {
+        "phi-4": {
+            "pointer": [
+                "Unit test for"
+            ]
+        }
+    },
+    "TestFileSizeCountTask.java": {
+        "phi-4": {
+            "summary": [
+                "* Unit test for File Size Count Task."
+            ],
+            "other": []
+        }
+    },
+    "TestHandler.java": {
+        "phi-4": {
+            "summary": [
+                "Tests Handler interface."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "TestHDFSServerPorts.java": {
+        "phi-4": {
+            "summary": [
+                "* This test checks correctness of port usage by hdfs components:\", \"NameNode, DataNode, SecondaryNamenode and BackupNode."
+            ],
+            "rationale": [
+                "- when a specific port is provided the server must either start on that port * or fail by throwing {\"@link\": \"java.net.BindException\"}.",
+                "- if the port = 0 (ephemeral) then the server should choose * a free port and start on it."
+            ]
+        }
+    },
+    "TestKeyInputStream.java": {
+        "phi-4": {
+            "pointer": [
+                "Tests {@link KeyInputStream}."
+            ]
+        }
+    },
+    "TestMetricsVisitor.java": {
+        "phi-4": {
+            "summary": [
+                "* Test the metric visitor interface"
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "TestNativeAzureFileSystemUploadLogic.java": {
+        "phi-4": {
+            "summary": [],
+            "expand": [
+                "* Tests for the upload, buffering and flush logic in WASB."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [
+                "| Just an arbitrary number so that the values I write have a predictable"
+            ],
+            "ownership": [],
+            "pointer": [
+                "* Various scenarios to test in how often we flush data while uploading."
+            ],
+            "other": []
+        }
+    },
+    "TestOmMultipartKeyInfoCodec.java": {
+        "phi-4": {
+            "summary": [
+                "This class tests OmMultipartKeyInfoCodec."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "TestOMVolumeRequest.java": {
+        "phi-4": {
+            "summary": [
+                "Base test class for Volume request."
+            ],
+            "other": []
+        }
+    },
+    "TestOzoneNativeAuthorizer.java": {
+        "phi-4": {
+            "pointer": [
+                "* Test class for {@link OzoneNativeAuthorizer}."
+            ]
+        }
+    },
+    "TestProtoBufRpc.java": {
+        "phi-4": {
+            "summary": [
+                "* Test for testing protocol buffer based RPC mechanism."
+            ],
+            "pointer": [
+                "* This test depends on test.proto definition of types in src/test/proto",
+                "* protobuf service definition from src/test/test_rpc_service.proto"
+            ]
+        }
+    },
+    "TestRDBStore.java": {
+        "phi-4": {
+            "summary": [
+                "RDBStore Tests."
+            ]
+        }
+    },
+    "TestRegistrySecurityHelper.java": {
+        "phi-4": {
+            "summary": [
+                "Test for registry security operations"
+            ]
+        }
+    },
+    "TestRollingFileSystemSinkWithLocal.java": {
+        "phi-4": {
+            "pointer": [
+                "{@link RollingFileSystemSink}"
+            ],
+            "other": [
+                "* Test the {@link RollingFileSystemSink} class in the context of the local file system."
+            ]
+        }
+    },
+    "TestRouterWebServiceUtil.java": {
+        "phi-4": {
+            "summary": [
+                "Test class to validate RouterWebServiceUtil methods."
+            ],
+            "other": []
+        }
+    },
+    "TestS3BucketManager.java": {
+        "phi-4": {
+            "summary": [
+                "Tests for S3 Bucket Manager."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "TestSaveNamespace.java": {
+        "phi-4": {
+            "summary": [
+                "* Test various failure scenarios during saveNamespace() operation."
+            ],
+            "expand": [
+                "* Cases covered:",
+                "* <ol>",
+                "* <li>Recover from failure while saving into the second storage directory</li>",
+                "* <li>Recover from failure while moving current into lastcheckpoint.tmp</li>",
+                "* <le Recover from failure while moving lastcheckpoint.tmp into",
+                "previous.checkpoint</li>",
+                "* <li>Recover from failure while rolling edits file</li>",
+                "* </ol>"
+            ]
+        }
+    },
+    "TestSCMDatanodeHeartbeatDispatcher.java": {
+        "phi-4": {
+            "summary": [
+                "This class tests the behavior of SCMDatanodeHeartbeatDispatcher."
+            ],
+            "other": []
+        }
+    },
+    "TestSequenceFile.java": {
+        "phi-4": {
+            "summary": [
+                "Support for flat files of binary key/value pairs."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "TestSeveralNameNodes.java": {
+        "phi-4": {
+            "summary": [
+                "Test that we can start several and run with namenodes on the same minicluster"
+            ],
+            "other": []
+        }
+    },
+    "TestSwiftFileSystemContract.java": {
+        "phi-4": {
+            "summary": [
+                "* This is the full filesystem contract test -which requires the",
+                "* Default config set up to point to a filesystem."
+            ],
+            "expand": [
+                "* Some of the tests override the base class tests -these",
+                "* are where SwiftFS does not implement those features, or"
+            ],
+            "rationale": [
+                "* when the behavior of SwiftFS does not match the normal",
+                "* contract -which normally means that directories and equal files",
+                "* are being treated as equal."
+            ]
+        }
+    },
+    "TestTaskCommit.java": {
+        "phi-4": {
+            "summary": [
+                "Special Committer that does not cleanup temporary files in abortTask"
+            ],
+            "expand": [
+                "The framework's FileOutputCommitter cleans up any temporary files left behind in abortTask."
+            ],
+            "rationale": [
+                "We want the test case to find these files and hence short-circuit abortTask."
+            ],
+            "deprecation": [],
+            "usage": [
+                "Special committer that always requires commit."
+            ],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "TestTaskContext.java": {
+        "phi-4": {
+            "pointer": [
+                "* Tests context api and {@link StatusReporter#getProgress()} via * {@link TaskAttemptContext#getProgress()} API ."
+            ]
+        }
+    },
+    "TestTopCLI.java": {
+        "phi-4": {
+            "summary": [
+                "Test class for TopCli."
+            ],
+            "other": []
+        }
+    },
+    "TestUpgradeDomainBlockPlacementPolicy.java": {
+        "phi-4": {
+            "summary": [
+                "End-to-end test case for upgrade domain"
+            ],
+            "expand": [
+                "The test configs upgrade domain for nodes via admin json",
+                "config file and put some nodes to decommission state.",
+                "The test then verifies replicas are placed on the nodes that",
+                "satisfy the upgrade domain policy."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "TextInputFormat.java": {
+        "phi-4": {
+            "summary": [
+                "An {@link InputFormat} for plain text files. Files are broken into lines.",
+                "Keys are the position in the file, and values are the line of text."
+            ],
+            "expand": [
+                "Either linefeed or carriage-return are used to signal end of line."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "{@link InputFormat}"
+            ],
+            "other": []
+        }
+    },
+    "TimelineDataToRetrieve.java": {
+        "phi-4": {
+            "summary": [
+                "Encapsulates information regarding which data to retrieve for each entity while querying."
+            ],
+            "expand": [
+                "Data to retrieve contains the following:"
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [
+                "* <b>confsToRetrieve</b> - Used for deciding which configs to return in response. This is represented as a {@link TimelineFilterList} object containing {@link TimelinePrefixFilter} objects. These can either be exact config keys' or prefixes which are then compared against config keys' to decide configs(inside entities) to return in response. If null or empty, all configurations will be fetched if fieldsToRetrieve contains {@link Field#CONFIGS} or {@link Field#ALL}. This should not be confused with configFilters which is used to decide which entities to return instead.",
+                "* <b>metricsToRetrieve</b> - Used for deciding which metrics to return in response. This is represented as a {@link TimelineFilterList} object containing {@link TimelinePrefixFilter} objects. These can either be exact metric ids' or prefixes which are then compared against metric ids' to decide metrics(inside entities) to return in response. If null or empty, all metrics will be fetched if fieldsToRetrieve contains {@link Field#METRICS} or {@link Field#ALL}. This should not be confused with metricFilters which is used to decide which entities to return instead.",
+                "* <b>fieldsToRetrieve</b> - Specifies which fields of the entity object to retrieve, see {@link Field}. If null, retrieves 3 fields, namely entity id, entity type and entity created time. All fields will be returned if {@link Field#ALL} is specified.",
+                "* <b>metricsLimit</b> - If fieldsToRetrieve contains METRICS/ALL or metricsToRetrieve is specified, this limit defines an upper limit to the number of metrics to return. This parameter is ignored if METRICS are not to be fetched.",
+                "* <b>metricsTimeStart</b> - Metric values before this timestamp would not be retrieved. If null or {@literal <0}, defaults to 0.",
+                "* <b>metricsTimeEnd</b> - Metric values after this timestamp would not be retrieved. If null or {@literal <0}, defaults to {@link Long#MAX_VALUE}."
+            ],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "TimelineStorageMonitor.java": {
+        "phi-4": {
+            "summary": [
+                "This abstract class is for monitoring Health of Timeline Storage."
+            ],
+            "other": [
+                "Different Storages supported by ATSV2."
+            ]
+        }
+    },
+    "TonyRuntimeFactory.java": {
+        "phi-4": {
+            "summary": [
+                "Implementation of RuntimeFactory with Tony Runtime"
+            ]
+        }
+    },
+    "TypedEvent.java": {
+        "phi-4": {
+            "summary": [
+                "Basic event implementation to implement custom events."
+            ],
+            "other": [
+                "@param <T>"
+            ]
+        }
+    },
+    "UniformSizeInputFormat.java": {
+        "phi-4": {
+            "summary": [
+                "UniformSizeInputFormat extends the InputFormat class, to produce input-splits for DistCp."
+            ],
+            "expand": [
+                "It looks at the copy-listing and groups the contents into input-splits such that the total-number of bytes to be copied for each input split is uniform."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "Utils.java": {
+        "phi-4": {
+            "summary": [
+                "A utility class. It provides",
+                "This class filters output(part) files from the given directory"
+            ],
+            "expand": [
+                "It does not accept files with filenames _logs and _SUCCESS.",
+                "This can be used to list paths of output directory as follows:",
+                "Path[] fileList = FileUtil.stat2Paths(fs.listStatus(outDir,new OutputFilesFilter()));",
+                "It doesnt accept paths having _logs.",
+                "This can be used to list paths of output directory as follows:",
+                "Path[] fileList = FileUtil.stat2Paths(fs.listStatus(outDir,new OutputLogFilter()));"
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [
+                "This can be used to list paths of output directory as follows:",
+                "Path[] fileList = FileUtil.stat2Paths(fs.listStatus(outDir,new OutputFilesFilter()));",
+                "This can be used to list paths of output directory as follows:",
+                "Path[] fileList = FileUtil.stat2Paths(fs.listStatus(outDir,new OutputLogFilter()));"
+            ],
+            "ownership": [],
+            "pointer": [],
+            "other": [
+                "A path filter utility to filter out output/part files in the output dir",
+                "This class filters log files from directory given"
+            ]
+        }
+    },
+    "VolumeSet.java": {
+        "phi-4": {
+            "summary": [
+                "* VolumeSet to manage HDDS volumes in a DataNode."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "WritableComparator.java": {
+        "phi-4": {
+            "summary": [
+                "A Comparator for {@link WritableComparable}s."
+            ],
+            "expand": [
+                "To define alternate orderings, override {@link #compare(WritableComparable,WritableComparable)}.",
+                "One may optimize compare-intensive operations by overriding {@link #compare(byte[],int,int,byte[],int,int)}. Static utility methods are provided to assist in optimized implementations of this method."
+            ],
+            "rationale": [
+                "This base implementation uses the natural ordering."
+            ]
+        }
+    },
+    "YarnAuthorizationProvider.java": {
+        "phi-4": {
+            "summary": [
+                "An implementation of the interface will provide authorization related information and enforce permission check."
+            ],
+            "rationale": [
+                "It is expected that any of the methods defined in this interface should be non-blocking call and should not involve expensive computation as these method could be invoked in RPC."
+            ]
+        }
+    },
+    "YarnServiceJobSubmitter.java": {
+        "phi-4": {
+            "summary": [
+                "Submit a job to cluster."
+            ],
+            "other": []
+        }
+    },
+    "ChunkFetchSuccess.java": {
+        "phi-4": {
+            "summary": [
+                "* Response to {\\@link ChunkFetchRequest} when a chunk exists and has been successfully fetched."
+            ],
+            "rationale": [
+                "Note that the server-side encoding of this messages does NOT include the buffer itself, as this may be written by Netty in a more efficient manner (i.e., zero-copy write). Similarly, the client-side decoding will reuse the Netty ByteBuf as the buffer."
+            ],
+            "pointer": [
+                "{@link ChunkFetchRequest}"
+            ]
+        }
+    },
+    "ExecutorPlugin.java": {
+        "phi-4": {
+            "summary": [
+                "A plugin which can be automatically instantiated within each Spark executor. Users can specify plugins which should be created with the \"spark.executor.plugins\" configuration. An instance of each plugin will be created for every executor, including those created by dynamic allocation, before the executor starts running any tasks."
+            ],
+            "rationale": [
+                "The specific api exposed to the end users still considered to be very unstable. We will hopefully be able to keep compatibility by providing default implementations for any methods added, but make no guarantees this will always be possible across all Spark releases."
+            ],
+            "other": [
+                "Spark does nothing to verify the plugin is doing legitimate things, or to manage the resources it uses. A plugin acquires the same privileges as the user running the task. A bad plugin could also interfere with task execution and make the executor fail in unexpected ways."
+            ]
+        }
+    },
+    "FlatMapFunction.java": {
+        "phi-4": {
+            "summary": [
+                "* A function that returns zero or more output records from each input record."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "JavaRecord.java": {
+        "phi-4": {
+            "summary": [
+                "Java Bean class to be used with the example JavaSqlNetworkWordCount."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [
+                "Java Bean class to be used with the example JavaSqlNetworkWordCount."
+            ],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "JavaStreamingTestExample.java": {
+        "phi-4": {
+            "summary": [
+                "* Perform streaming testing using Welch's 2-sample t-test on a stream of data, where the data",
+                " * stream arrives as text files in a directory. Stops when the two groups are statistically",
+                " * significant (p-value < 0.05) or after a user-specified timeout in number of batches is exceeded."
+            ],
+            "expand": [
+                "* The rows of the text files must be in the form `Boolean, Double`. For example:",
+                "   false, -3.92",
+                "   true, 99.32"
+            ],
+            "usage": [
+                "Usage:",
+                "   JavaStreamingTestExample <dataDir> <batchDuration> <numBatchesTimeout>",
+                "",
+                "To run on your local machine using the directory `dataDir` with 5 seconds between each batch and",
+                "a timeout after 100 insignificant batches, call:",
+                "   $ bin/run-example mllib.JavaStreamingTestExample dataDir 5 100"
+            ],
+            "other": [
+                "As you add text files to `dataDir` the significance test wil continually update every",
+                " `batchDuration` seconds until the test becomes significant (p-value < 0.05) or the number of",
+                " batches processed exceeds `numBatchesTimeout`."
+            ]
+        }
+    },
+    "KVStore.java": {
+        "phi-4": {
+            "summary": [
+                "* Abstraction for a local key/value store for storing app data."
+            ],
+            "expand": [
+                "There are two main features provided by the implementations of this interface:",
+                "<h3>Serialization</h3>",
+                "If the underlying data store requires serialization, data will be serialized to and deserialized using a {@link KVStoreSerializer}, which can be customized by the application. The serializer is based on Jackson, so it supports all the Jackson annotations for controlling the serialization of app-defined types.",
+                "Data is also automatically compressed to save disk space.",
+                "<h3>Automatic Key Management</h3>",
+                "When using the built-in key management, the implementation will automatically create unique keys for each type written to the store. Keys are based on the type name, and always start with the '+' prefix character (so that it's easy to use both manual and automatic key management APIs without conflicts).",
+                "Another feature of automatic key management is indexing; by annotating fields or methods of objects written to the store with {@link KVIndex}, indices are created to sort the data by the values of those properties. This makes it possible to provide sorting without having to load all instances of those types from the store."
+            ],
+            "rationale": [
+                "The serializer is based on Jackson, so it supports all the Jackson annotations for controlling the serialization of app-defined types.",
+                "Another feature of automatic key management is indexing; by annotating fields or methods of objects written to the store with {@link KVIndex}, indices are created to sort the data by the values of those properties."
+            ],
+            "usage": [
+                "Keys are based on the type name, and always start with the '+' prefix character (so that it's easy to use both manual and automatic key management APIs without conflicts)."
+            ],
+            "other": [
+                "KVStore instances are thread-safe for both reads and writes."
+            ]
+        }
+    },
+    "LevelDB.java": {
+        "phi-4": {
+            "summary": [
+                "Implementation of KVStore that uses LevelDB as the underlying data store."
+            ],
+            "rationale": [
+                "Needs to be public for Jackson."
+            ]
+        }
+    },
+    "LocalDiskShuffleDataIO.java": {
+        "phi-4": {
+            "summary": [
+                "* Implementation of the {@link ShuffleDataIO} plugin system that replicates the local shuffle"
+            ],
+            "expand": [
+                "storage and index file functionality that has historically been used from Spark 2.4 and earlier."
+            ],
+            "rationale": [],
+            "deprecation": [
+                "* Implementation of the {@link ShuffleDataIO} plugin system that replicates the local shuffle"
+            ],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "{@link ShuffleDataIO}"
+            ],
+            "other": []
+        }
+    },
+    "MessageWithHeader.java": {
+        "phi-4": {
+            "summary": [
+                "A wrapper message that holds two separate pieces (a header and a body)."
+            ],
+            "rationale": [
+                "The header must be a ByteBuf, while the body can be a ByteBuf or a FileRegion."
+            ]
+        }
+    },
+    "RemoveBlocks.java": {
+        "phi-4": {
+            "summary": [
+                "Request to remove a set of blocks."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "StreamHandle.java": {
+        "phi-4": {
+            "summary": [
+                "Identifier for a fixed number of chunks to read from a stream created by an \"open blocks\" message. This is used by"
+            ],
+            "pointer": [
+                "{@link org.apache.spark.network.shuffle.OneForOneBlockFetcher}"
+            ]
+        }
+    },
+    "TBoolColumn.java": {
+        "phi-4": {
+            "summary": [
+                "The set of fields this struct contains, along with convenience methods for finding and manipulating them."
+            ]
+        }
+    },
+    "UploadBlockStream.java": {
+        "phi-4": {
+            "summary": [
+                "* A request to Upload a block, which the destination should receive as a stream."
+            ],
+            "expand": [
+                "The actual block data is not contained here.  It will be passed to the StreamCallbackWithID that is returned from RpcHandler.receiveStream()"
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "AbstractCPropertyTab.java": {
+        "phi-4": {
+            "summary": [
+                "* It is a parent for all standard property tabs",
+                " in new CDT model."
+            ],
+            "expand": [],
+            "rationale": [
+                " Although it's enough for new tabs to implement",
+                " ICPropertyTab interface only, it would be better",
+                " to extend them from this class."
+            ],
+            "deprecation": [],
+            "usage": [
+                "* In this case, we'll able to use:",
+                "* - a lot of utility methods via \"provider\" link.",
+                " In particular, it allows to get current project,",
+                " configuration etc. See ICPropertyProvider interface.",
+                "* - a standard way to create buttons (ins/edit/del etc)",
+                " and to handle their events (see buttonPressed(int))",
+                "* - several utility methods to create widgets in the",
+                " uniform manner (setupLabel(), setupText() etc).",
+                "* - means to handle control messages which are the main",
+                " communication way for new CDT model pages and tabs."
+            ],
+            "ownership": [],
+            "pointer": [],
+            "other": [
+                " See ICPropertyProvider interface.",
+                " see buttonPressed(int)",
+                " setupLabel(), setupText() etc",
+                " for new CDT model pages and tabs."
+            ]
+        }
+    },
+    "AbstractTrialUndoActionProvider.java": {
+        "phi-4": {
+            "summary": [
+                "* Base class for parser action classes which support trial, undo and final actions."
+            ],
+            "usage": [
+                "* Action for a null rule"
+            ]
+        }
+    },
+    "AddBreakpointRulerAction.java": {
+        "phi-4": {
+            "summary": [
+                "Ruler action to add breakpoint with a dialog properties."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "AddLineBreakpointActionDelegate.java": {
+        "phi-4": {
+            "summary": [
+                "A delegate for the \"Add Line Breakpoint\" action."
+            ],
+            "expand": [
+                "Initially derived from AddFunctionBreakpointActionDelegate"
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "AddMemoryBlocks.java": {
+        "phi-4": {
+            "summary": [
+                "* Adds memory blocks to the Memory view."
+            ],
+            "expand": [
+                "CDT adapter logic will link us to a CMemoryBlockRetrievalExtension if and only if the CDI backend support memory spaces. When this is the case, the platform will call us to add a memory monitor to the Memory view. We must put up a dialog, handle the user input, create the memory blocks with default renderings and add them to the view."
+            ],
+            "rationale": [
+                "In order to avoid duplicating the addMemoryBlocks method--one version for expressions, one for memory-space+address, we pass in an opaque parameter and let the logic within addMemoryBlocks differentiate where needed via isinstanceof"
+            ],
+            "usage": [
+                "Request object used to get the memory spaces"
+            ],
+            "ownership": [],
+            "pointer": [],
+            "other": [
+                "@since 3.2"
+            ]
+        }
+    },
+    "AllTemplateEngineTests.java": {
+        "phi-4": {
+            "summary": [
+                "This is a TestSuite, the TestCases created to test Template engine are added to testsuite."
+            ],
+            "expand": [
+                "The test suite will execute all the Testcases added to the Suite."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "@since 4.0"
+            ],
+            "other": []
+        }
+    },
+    "AutoconfMacroParameterListValidator.java": {
+        "phi-4": {
+            "summary": [
+                "This class provides the macro call parameter parsing for the Autoconf Editor hover"
+            ],
+            "rationale": [
+                "It is modified from the CDT class CParameterListValidator"
+            ],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "AutotoolsProblemMarkerInfo.java": {
+        "phi-4": {
+            "deprecation": [
+                "This class is not intended to be subclassed by clients."
+            ]
+        }
+    },
+    "BindingClassifierTest.java": {
+        "phi-4": {
+            "pointer": [
+                "Tests for `{@link BindingClassifier}`."
+            ]
+        }
+    },
+    "C99BuildASTParserAction.java": {
+        "phi-4": {
+            "summary": [],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [
+                "* Semantic actions called by the C99 parser to build an AST.\\"
+            ],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "CConfigurationDescriptionCache.java": {
+        "phi-4": {
+            "summary": [
+                "CConfigurationDescriptionCache is a proxy class for serialization of configuration description data."
+            ],
+            "expand": [
+                "An inspection of the scenario where user changes project properties and saves it yields following sequence of events: <ol> <li> Initialization: <ul> <li> After eclipse started a project is being opened. A new CConfigurationDescriptionCache is created with CConfigurationDescriptionCache(ICStorageElement storage, CProjectDescription parent) constructor. <li> Any clients needed ICConfigurationDescription get CConfigurationDescription using constructor CConfigurationDescription(CConfigurationData data, String buildSystemId, ICDataProxyContainer cr) where the CConfigurationDescriptionCache is passed as data. The reference to cache is kept in field fCfgCache. <li> fCfgCache is used to getSpecSettings() CConfigurationSpecSettings, after that fCfgCache is set to null. </ul> <li> User enters project properties/settings: <ul> <li> another CConfigurationDescription (settings configuration) created using the same constructor setting fCfgCache to the CConfigurationDescriptionCache. </ul> <li> User changes settings (in the settings configuration CConfigurationDescription) and saves it: <ul> <li> new CConfigurationDescriptionCache is created from the CConfigurationDescription via constructor CConfigurationDescriptionCache(ICConfigurationDescription baseDescription, ...) where baseDescription is saved as fBaseDescription. <li> CConfigurationDescriptionCache.applyData(...) is used to persist the data. at that point reference fBaseDescription gets set to null. </ul> </ol>"
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "@see ICConfigurationDescription",
+                "@see CConfigurationDescription",
+                "@see CProjectDescriptionEvent"
+            ],
+            "other": []
+        }
+    },
+    "CDebugModelPresentation.java": {
+        "phi-4": {
+            "pointer": [
+                "@see IDebugModelPresentation"
+            ]
+        }
+    },
+    "CElementDelta.java": {
+        "phi-4": {
+            "pointer": [
+                "@see ICElementDelta"
+            ]
+        }
+    },
+    "ClangToolChain.java": {
+        "phi-4": {
+            "ownership": [
+                "The comment identifies the author of the code or the ownership details, commonly marked with @author. In this case, 'dschaefer' is identified as the author."
+            ],
+            "other": [
+                "The rest of the comment provides a brief distinction between the Clang and GCC toolchains, which does not fit neatly into any specific category like summary or rationale. It offers a general descriptive note about the toolchain's similarities, focusing on the type and name differences."
+            ]
+        }
+    },
+    "CommonBuildTab.java": {
+        "phi-4": {
+            "summary": [],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": [
+                "Common utilities for Core Build launch configuration tabs."
+            ]
+        }
+    },
+    "ContainerTabModel.java": {
+        "phi-4": {
+            "ownership": [
+                "@author jjohnstn"
+            ],
+            "other": [
+                "* @since 1.2.1"
+            ]
+        }
+    },
+    "CoreBuildGenericLaunchConfigProvider.java": {
+        "phi-4": {
+            "summary": [
+                "* Core launch configuration provider used by generic target types."
+            ],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "@since 8.3"
+            ],
+            "other": []
+        }
+    },
+    "CPPASTProblem.java": {
+        "phi-4": {
+            "summary": [
+                "C++-specific implementation allows actions to visit the problem."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "CPPASTReferenceOperator.java": {
+        "phi-4": {
+            "summary": [
+                "Reference operator for declarators."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "CPPDeferredFunction.java": {
+        "phi-4": {
+            "summary": [
+                "Represents a reference to a (member) function (instance), which cannot be resolved because an argument depends on a template parameter."
+            ],
+            "expand": [
+                "A compiler would resolve it during instantiation."
+            ]
+        }
+    },
+    "CPPImplicitVariable.java": {
+        "phi-4": {
+            "summary": [
+                "Represents a variable implicitly created in C++ code."
+            ],
+            "expand": [
+                "For example the initializer of a structured binding decomposition [dcl.struct.bind]: <code>auto [first, second] = decomposed;</code>"
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [
+                "The <code>initializerEvaluation</code> has to be supplied."
+            ],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "CPPTemplates.java": {
+        "phi-4": {
+            "summary": [
+                "Collection of static methods to perform template instantiation, member specialization and type instantiation."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "CPropertyTester.java": {
+        "phi-4": {
+            "summary": [
+                "A property tester that determines if a file is an executable or a C/C++ project."
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "CUIPreferenceInitializer.java": {
+        "phi-4": {
+            "summary": [
+                "This class implements the setting of the CUI initial preference store settings."
+            ],
+            "rationale": [
+                "@noextend This class is not intended to be subclassed by clients."
+            ]
+        }
+    },
+    "CWordFinder.java": {
+        "phi-4": {
+            "summary": [
+                "* This is a helper class for the text editor to be able to determine, given a"
+            ],
+            "expand": [
+                "particular offset in a document, various candidates segments for things like",
+                " context help, proposals and hovering."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "DefaultEnvironmentContextInfo.java": {
+        "phi-4": {
+            "summary": [
+                "The default implementation of the IContextInfo used by the Environment Variable Provider Used to represent the Configuration, Project, Workspace and Eclipse environment contexts"
+            ],
+            "deprecation": [
+                "@since 3.0"
+            ]
+        }
+    },
+    "DefaultFortranDependencyCalculator.java": {
+        "phi-4": {
+            "summary": [
+                "This class implements the Dependency Manager and Output Name Provider interfaces"
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "for a very \"quick & dirty\" ifort tool-chain on Win32"
+            ],
+            "other": []
+        }
+    },
+    "DisplayDsfExecutor.java": {
+        "phi-4": {
+            "summary": [
+                "DSF executor which uses the display thread to run the submitted runnables and callables. The implementation is based on the default DSF executor which still creates its own thread."
+            ],
+            "rationale": [
+                "However this thread blocks when running each executable in the display thread."
+            ],
+            "deprecation": [
+                "@since 1.0"
+            ]
+        }
+    },
+    "DocCommentOwnerBlock.java": {
+        "phi-4": {
+            "summary": [
+                "* Project property page for setting documentation comment owner."
+            ],
+            "rationale": [
+                " * <em>This class is not intended for use outside of CDT</em>",
+                "* @noextend This class is not intended to be subclassed by clients.",
+                "* @noinstantiate This class is not intended to be instantiated by clients."
+            ],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "DOMGCCParserExtensionTestSuite.java": {
+        "phi-4": {
+            "ownership": [
+                "@author jcamelon"
+            ]
+        }
+    },
+    "DOMParserTestSuite.java": {
+        "phi-4": {
+            "ownership": [
+                "@author jcamelon"
+            ]
+        }
+    },
+    "DsfDebugUITools.java": {
+        "phi-4": {
+            "deprecation": [
+                "@since 1.1"
+            ],
+            "other": []
+        }
+    },
+    "DummyPage.java": {
+        "phi-4": {
+            "summary": [
+                "This class is just to replace a category reference in org.eclipse.cdt.ui"
+            ],
+            "rationale": [
+                "that| we exclude because we do not bring in the org.eclipse.cdt.managedbuild.ui plug-in."
+            ]
+        }
+    },
+    "ElementNumberFormatsContribution.java": {
+        "phi-4": {
+            "summary": [
+                "Dynamic menu contribution that shows available number formats in the current selection of the view."
+            ],
+            "rationale": [],
+            "deprecation": [
+                "@since 2.2"
+            ],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "FindStdLibPath.java": {
+        "phi-4": {
+            "summary": [
+                "* The purpose is to find a path where stdc++ library is located."
+            ],
+            "rationale": [
+                "* TODO: It might not be able to execute scripts therefore place the command into a variable."
+            ],
+            "other": [
+                "* Currently the shell script is only for Linux."
+            ]
+        }
+    },
+    "FoldingConfigurationBlock.java": {
+        "phi-4": {
+            "summary": [
+                "Configures C Editor folding preferences."
+            ],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": [
+                "@since 3.0"
+            ]
+        }
+    },
+    "FormattedValueTests.java": {
+        "phi-4": {
+            "summary": [
+                "* Tests to verify the operation of FormattedValuesVMUtil"
+            ],
+            "expand": [
+                " * helper class that stores some element paths and nodes using a certain format"
+            ],
+            "rationale": [],
+            "deprecation": [
+                " @since 2.2"
+            ],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "GCCKeywords.java": {
+        "phi-4": {
+            "summary": [],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [
+                "@noextend This interface is not intended to be extended by clients.",
+                "@noinstantiate This class is not intended to be instantiated by clients."
+            ],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "GDBControl_7_12.java": {
+        "phi-4": {
+            "summary": [],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [
+                "Need a new FinalLaunchSequence for GDB 7.12"
+            ],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "@since 5.2"
+            ],
+            "other": []
+        }
+    },
+    "GdbExpressionVMProvider.java": {
+        "phi-4": {
+            "summary": [
+                "A specialization of ExpressionVMProvider that uses a GDB-specific variable VM"
+            ],
+            "expand": [],
+            "rationale": [
+                "To understand why this is necessary, see GdbVariableVMNode."
+            ],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [
+                "GdbVariableVMNode"
+            ],
+            "other": []
+        }
+    },
+    "GDBSourceLookup.java": {
+        "phi-4": {
+            "summary": [],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [
+                "* Default implementation of {@link IGDBSourceLookup}"
+            ],
+            "ownership": [],
+            "pointer": [
+                "{@link IGDBSourceLookup}"
+            ],
+            "other": [
+                "* @since 5.0"
+            ]
+        }
+    },
+    "GnuMakefileGenerator.java": {
+        "phi-4": {
+            "summary": [
+                "This is a specialized makefile generator that takes advantage of the extensions present in Gnu Make."
+            ],
+            "deprecation": [
+                "@noinstantiate This class is not intended to be instantiated by clients."
+            ],
+            "other": [
+                "@since 1.2",
+                "| String constants for makefile contents and messages |private static final String AUTO_DEP = COMMENT + \".autodeps\";        //$NON-NLS-1$ |private static final String MESSAGE = \"ManagedMakeBuilder.message\";        //$NON-NLS-1$ |private static final String BUILD_ERROR = MESSAGE + \".error\";        //$NON-NLS-1$ |private static final String DEP_INCL = COMMENT + \".module.dep.includes\";        //$NON-NLS-1$ |private static final String MOD_INCL = COMMENT + \".module.make.includes\";        //$NON-NLS-1$ |",
+                "private ITool[] buildTools;",
+                "private boolean[] buildToolsUsed;",
+                "private IManagedBuildInfo info;",
+                "private Set outputExtensionsSet;",
+                "|=== Maps of macro names (String) to values (List)| Dependency file variables|",
+                "private Vector dependencyMakefiles;                //  IPath's - relative to the top build directory or absolute",
+                "|*********************************************************************** *   IManagedBuilderMakefileGenerator   M E T H O D S ***********************************************************************",
+                "|*********************************************************************** *   M A K E F I L E S   P O P U L A T I O N   M E T H O D S ***********************************************************************",
+                "|*********************************************************************** *   M A I N (makefile)   M A K E F I L E   M E T H O D S ***********************************************************************",
+                "|*********************************************************************** *   S O U R C E S (sources.mk)   M A K E F I L E   M E T H O D S ***********************************************************************",
+                "|*********************************************************************** *   F R A G M E N T (subdir.mk)   M A K E F I L E   M E T H O D S ***********************************************************************",
+                "|*********************************************************************** *   M A K E F I L E   G E N E R A T I O N   C O M M O N   M E T H O D S ***********************************************************************|",
+                "* Adds a macro addition prefix to a map of macro names to entries. Entry prefixes look like:",
+                "         C_SRCS += \\",
+                "         ${addprefix $(ROOT)/, \\",
+                "|*********************************************************************** *   R E S O U R C E   V I S I T O R   M E T H O D S ***********************************************************************",
+                "|*********************************************************************** *   O T H E R   M E T H O D S ***********************************************************************|",
+                "* Process a String denoting a filepath in a way compatible for GNU Make rules, handling windows drive letters and whitespace appropriately.",
+                "* <p><p> The context these paths appear in is on the right hand side of a rule header. i.e.",
+                "* <p><p> target : dep1 dep2 dep3",
+                "<p>",
+                "@param path the String denoting the path to process",
+                "@throws NullPointerException is path is null",
+                "@return a suitable Make rule compatible path",
+                "| String constants for makefile contents and messages |private static final String AUTO_DEP = COMMENT + \".autodeps\";        //$NON-NLS-1$ |private static final String MESSAGE = \"ManagedMakeBuilder.message\";        //$NON-NLS-1$ |private static final String BUILD_ERROR = MESSAGE + \".error\";        //$NON-NLS-1$ |private static final String DEP_INCL = COMMENT + \".module.dep.includes\";        //$NON-NLS-1$ |private static final String MOD_INCL = COMMENT + \".module.make.includes\";        //$NON-NLS-1$ |",
+                "* Adds a macro addition prefix to a map of macro names to entries. Entry prefixes look like:",
+                "         C_SRCS += \\",
+                "         ${addprefix $(ROOT)/, \\",
+                "|*********************************************************************** *   R E S O U R C E   V I S I T O R   M E T H O D S ***********************************************************************",
+                "|*********************************************************************** *   O T H E R   M E T H O D S ***********************************************************************|",
+                "* Process a String denoting a filepath in a way compatible for GNU Make rules, handling windows drive letters and whitespace appropriately.",
+                "* <p><p> The context these paths appear in is on the right hand side of a rule header. i.e.",
+                "* <p><p> target : dep1 dep2 dep3",
+                "<p>",
+                "@param path the String denoting the path to process",
+                "@throws NullPointerException is path is null",
+                "@return a suitable Make rule compatible path",
+                "* This class walks the delta supplied by the build system to determine what resources have been changed. The logic is very simple. If a buildable resource (non-header) has been added or removed, the directories in which they are located are \"dirty\" so the makefile fragments for them have to be regenerated.",
+                "* <p>",
+                "The actual dependencies are recalculated as a result of the build step itself. We are relying on make to do the right things when confronted with a dependency on a moved header file. That said, make will treat the missing header file in a dependency rule as a target it has to build unless told otherwise. These dummy targets are added to the makefile to avoid a missing target error.",
+                "* String constants for makefile contents and messages |private static final String AUTO_DEP = COMMENT + \".autodeps\";        //$NON-NLS-1$ |private static final String MESSAGE = \"ManagedMakeBuilder.message\";        //$NON-NLS-1$ |private static final String BUILD_ERROR = MESSAGE + \".error\";        //$NON-NLS-1$ |private static final String DEP_INCL = COMMENT + \".module.dep.includes\";        //$NON-NLS-1$ |private static final String MOD_INCL = COMMENT + \".module.make.includes\";        //$NON-NLS-1$ |",
+                "* This class is used to recursively walk the project and determine which modules contribute buildable source files."
+            ]
+        }
+    },
+    "GroupDebugContextsCommandHandler.java": {
+        "phi-4": {
+            "summary": [
+                "Command handler to trigger grouping of debug contexts operation."
+            ],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": [
+                ""
+            ]
+        }
+    },
+    "IBHistoryAction.java": {
+        "phi-4": {
+            "summary": [
+                "Action used for the include browser forward / backward buttons"
+            ],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "IBuildObject.java": {
+        "phi-4": {
+            "summary": [],
+            "expand": [],
+            "rationale": [],
+            "deprecation": [
+                "@noextend This class is not intended to be subclassed by clients.",
+                "@noimplement This interface is not intended to be implemented by clients."
+            ],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "ICLanguageSettingPathEntry.java": {
+        "phi-4": {
+            "summary": [
+                "Representation in the project model of language settings entries of path-kind such as include paths (-I) or include files and others."
+            ],
+            "pointer": [
+                "See interface hierarchy for more specifics."
+            ]
+        }
+    },
+    "ICLibraryFileEntry.java": {
+        "phi-4": {
+            "summary": [
+                "* Representation in the project model of language settings entries"
+            ],
+            "pointer": [
+                "such as library file (-l gcc option). See {@link ICSettingEntry#LIBRARY_FILE}."
+            ]
+        }
+    },
+    "ICodeReaderFactory.java": {
+        "phi-4": {
+            "summary": [
+                "* This is the interface that an AST Service uses to delegate the construction of a CodeReader."
+            ],
+            "rationale": [],
+            "deprecation": [
+                "@deprecated replaced by {@link IncludeFileContentProvider}"
+            ],
+            "usage": [],
+            "ownership": [
+                "@author jcamelon"
+            ],
+            "pointer": [],
+            "other": [
+                "* @noreference This interface is not intended to be referenced by clients."
+            ]
+        }
+    },
+    "ICPointerType.java": {
+        "phi-4": {
+            "summary": [],
+            "expand": [],
+            "rationale": [
+                "This interface is not intended to be extended by clients.",
+                "This interface is not intended to be implemented by clients."
+            ],
+            "deprecation": [
+                "@noextend This interface is not intended to be extended by clients.",
+                "@noimplement This interface is not intended to be implemented by clients."
+            ],
+            "usage": [],
+            "ownership": [],
+            "pointer": [],
+            "other": []
+        }
+    },
+    "ICPPAliasTemplateInstance.java": {
+        "phi-4": {
+            "summary": [
+                " * Represents an instance of an alias template (14.5.7)."
+            ],
+            "rationale": [
+                " * @noextend This interface is not intended to be extended by clients.",
+                " * @noimplement This interface is not intended to be implemented by clients."
+            ],
+            "deprecation": [
+                " * @since 5.5"
+            ],
+            "other": []
+        }
+    }
+}

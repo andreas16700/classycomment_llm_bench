@@ -1,0 +1,12 @@
+{
+  "bench_id": "llama3_3_70b",
+  "methods": [
+    {
+      "name": "deepseek_r1_l8b_q8",
+      "module": "lm_studio_templates.paper_methods",
+      "function": "predict_dsr1_llama3_p1"
+    }
+
+  ]
+}
+

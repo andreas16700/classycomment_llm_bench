@@ -1,0 +1,40 @@
+2025-01-28 14:57:36,347 | INFO | not copying 'stsbenchmark-test-sts.json' because it already exists in '/Users/andrew_yos/tepara/benches/llama3_3_70b'.
+2025-01-28 14:57:36,348 | INFO | not copying 'fb-anli-pre-hyp.json' because it already exists in '/Users/andrew_yos/tepara/benches/llama3_3_70b'.
+2025-01-28 14:57:36,348 | INFO | not copying 'stannlp-snli-pre-hyp.json' because it already exists in '/Users/andrew_yos/tepara/benches/llama3_3_70b'.
+2025-01-28 14:57:36,348 | INFO | not copying 'ms-mrpc.json' because it already exists in '/Users/andrew_yos/tepara/benches/llama3_3_70b'.
+2025-01-28 14:57:36,348 | INFO | not copying 'fb-anli-hyp-pre.json' because it already exists in '/Users/andrew_yos/tepara/benches/llama3_3_70b'.
+2025-01-28 14:57:36,348 | INFO | not copying 'sickr-sts.json' because it already exists in '/Users/andrew_yos/tepara/benches/llama3_3_70b'.
+2025-01-28 14:57:36,348 | INFO | not copying 'onestop_parallel_all_pairs.json' because it already exists in '/Users/andrew_yos/tepara/benches/llama3_3_70b'.
+2025-01-28 14:57:36,348 | INFO | not copying 'stannlp-snli-hyp-pre.json' because it already exists in '/Users/andrew_yos/tepara/benches/llama3_3_70b'.
+2025-01-28 14:57:36,348 | INFO | not copying 'amr_true_paraphrases.json' because it already exists in '/Users/andrew_yos/tepara/benches/llama3_3_70b'.
+2025-01-28 14:57:36,348 | INFO | not copying 'fb-xnli-pre-hyp.json' because it already exists in '/Users/andrew_yos/tepara/benches/llama3_3_70b'.
+2025-01-28 14:57:36,348 | INFO | not copying 'paws-x-test.json' because it already exists in '/Users/andrew_yos/tepara/benches/llama3_3_70b'.
+2025-01-28 14:57:36,348 | INFO | not copying 'fb-xnli-hyp-pre.json' because it already exists in '/Users/andrew_yos/tepara/benches/llama3_3_70b'.
+2025-01-28 14:57:36,348 | INFO | 
+
+[1;34mPredicting for stsbenchmark...[0m
+2025-01-28 14:57:36,352 | INFO | No predictions left for method deepseek_r1_l8b_q8.
+2025-01-28 14:57:36,352 | INFO | 
+
+[1;34mPredicting for ms_mrpc...[0m
+2025-01-28 14:57:36,356 | INFO | No predictions left for method deepseek_r1_l8b_q8.
+2025-01-28 14:57:36,356 | INFO | 
+
+[1;34mPredicting for onestop_all...[0m
+2025-01-28 14:57:36,358 | INFO | No predictions left for method deepseek_r1_l8b_q8.
+2025-01-28 14:57:36,358 | INFO | 
+
+[1;34mPredicting for simple_amr...[0m
+2025-01-28 14:57:36,358 | INFO | No predictions left for method deepseek_r1_l8b_q8.
+2025-01-28 14:57:36,358 | INFO | 
+
+[1;34mPredicting for fb_anli_pre_hyp...[0m
+2025-01-28 14:57:36,363 | INFO | No predictions left for method deepseek_r1_l8b_q8.
+2025-01-28 14:57:36,363 | INFO | 
+
+[1;34mPredicting for fb_anli_hyp_pre...[0m
+2025-01-28 14:57:36,368 | INFO | No predictions left for method deepseek_r1_l8b_q8.
+2025-01-28 14:57:36,368 | INFO | 
+
+[1;34mPredicting for sickr_sts...[0m
+2025-01-28 14:57:36,379 | INFO | 6940 predictions to be made using deepseek_r1_l8b_q8...
