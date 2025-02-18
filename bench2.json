@@ -8776,5 +8776,2410 @@
                 "category": "usage"
             }
         ]
+    },
+    "SmoothRateLimiter.java": {
+        "phi-4": []
+    },
+    "SortedSetNavigationTester.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "usage"
+            },
+            {
+                "id": 2,
+                "category": "pointer"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "ownership"
+            }
+        ]
+    },
+    "SubscriberTest.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "other"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "ownership"
+            },
+            {
+                "id": 5,
+                "category": "summary"
+            }
+        ]
+    },
+    "TesterRequirements.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "ownership"
+            }
+        ]
+    },
+    "TestStringListGenerator.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "other"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "ownership"
+            }
+        ]
+    },
+    "WrappingScheduledExecutorService.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "expand"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "summary"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "rationale"
+            },
+            {
+                "id": 6,
+                "category": "ownership"
+            }
+        ]
+    },
+    "AbstractModule.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "expand"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "pointer"
+            },
+            {
+                "id": 6,
+                "category": "usage"
+            },
+            {
+                "id": 7,
+                "category": "other"
+            },
+            {
+                "id": 8,
+                "category": "usage"
+            },
+            {
+                "id": 9,
+                "category": "usage"
+            },
+            {
+                "id": 10,
+                "category": "usage"
+            },
+            {
+                "id": 11,
+                "category": "usage"
+            },
+            {
+                "id": 12,
+                "category": "other"
+            },
+            {
+                "id": 13,
+                "category": "usage"
+            },
+            {
+                "id": 14,
+                "category": "other"
+            },
+            {
+                "id": 15,
+                "category": "pointer"
+            },
+            {
+                "id": 16,
+                "category": "ownership"
+            },
+            {
+                "id": 17,
+                "category": "other"
+            }
+        ]
+    },
+    "Binder.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "expand"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "other"
+            },
+            {
+                "id": 6,
+                "category": "other"
+            },
+            {
+                "id": 7,
+                "category": "expand"
+            },
+            {
+                "id": 8,
+                "category": "other"
+            },
+            {
+                "id": 9,
+                "category": "rationale"
+            },
+            {
+                "id": 10,
+                "category": "other"
+            },
+            {
+                "id": 11,
+                "category": "usage"
+            },
+            {
+                "id": 12,
+                "category": "other"
+            },
+            {
+                "id": 13,
+                "category": "usage"
+            },
+            {
+                "id": 14,
+                "category": "expand"
+            },
+            {
+                "id": 15,
+                "category": "other"
+            },
+            {
+                "id": 16,
+                "category": "usage"
+            },
+            {
+                "id": 17,
+                "category": "other"
+            },
+            {
+                "id": 18,
+                "category": "expand"
+            },
+            {
+                "id": 19,
+                "category": "other"
+            },
+            {
+                "id": 20,
+                "category": "usage"
+            },
+            {
+                "id": 21,
+                "category": "other"
+            },
+            {
+                "id": 22,
+                "category": "expand"
+            },
+            {
+                "id": 23,
+                "category": "other"
+            },
+            {
+                "id": 24,
+                "category": "usage"
+            },
+            {
+                "id": 25,
+                "category": "other"
+            },
+            {
+                "id": 26,
+                "category": "expand"
+            },
+            {
+                "id": 27,
+                "category": "other"
+            },
+            {
+                "id": 28,
+                "category": "expand"
+            },
+            {
+                "id": 29,
+                "category": "other"
+            },
+            {
+                "id": 30,
+                "category": "expand"
+            },
+            {
+                "id": 31,
+                "category": "other"
+            },
+            {
+                "id": 32,
+                "category": "usage"
+            },
+            {
+                "id": 33,
+                "category": "other"
+            },
+            {
+                "id": 34,
+                "category": "expand"
+            },
+            {
+                "id": 35,
+                "category": "other"
+            },
+            {
+                "id": 36,
+                "category": "expand"
+            },
+            {
+                "id": 37,
+                "category": "other"
+            },
+            {
+                "id": 38,
+                "category": "expand"
+            },
+            {
+                "id": 39,
+                "category": "other"
+            },
+            {
+                "id": 40,
+                "category": "rationale"
+            },
+            {
+                "id": 41,
+                "category": "other"
+            },
+            {
+                "id": 42,
+                "category": "rationale"
+            },
+            {
+                "id": 43,
+                "category": "other"
+            },
+            {
+                "id": 44,
+                "category": "expand"
+            },
+            {
+                "id": 45,
+                "category": "other"
+            },
+            {
+                "id": 46,
+                "category": "usage"
+            },
+            {
+                "id": 47,
+                "category": "other"
+            },
+            {
+                "id": 48,
+                "category": "expand"
+            },
+            {
+                "id": 49,
+                "category": "other"
+            },
+            {
+                "id": 50,
+                "category": "expand"
+            },
+            {
+                "id": 51,
+                "category": "other"
+            },
+            {
+                "id": 52,
+                "category": "usage"
+            },
+            {
+                "id": 53,
+                "category": "other"
+            },
+            {
+                "id": 54,
+                "category": "expand"
+            },
+            {
+                "id": 55,
+                "category": "other"
+            },
+            {
+                "id": 56,
+                "category": "usage"
+            },
+            {
+                "id": 57,
+                "category": "other"
+            },
+            {
+                "id": 58,
+                "category": "expand"
+            },
+            {
+                "id": 59,
+                "category": "other"
+            },
+            {
+                "id": 60,
+                "category": "expand"
+            },
+            {
+                "id": 61,
+                "category": "other"
+            },
+            {
+                "id": 62,
+                "category": "expand"
+            },
+            {
+                "id": 63,
+                "category": "other"
+            },
+            {
+                "id": 64,
+                "category": "rationale"
+            },
+            {
+                "id": 65,
+                "category": "other"
+            },
+            {
+                "id": 66,
+                "category": "rationale"
+            },
+            {
+                "id": 67,
+                "category": "other"
+            },
+            {
+                "id": 68,
+                "category": "expand"
+            },
+            {
+                "id": 69,
+                "category": "other"
+            },
+            {
+                "id": 70,
+                "category": "usage"
+            },
+            {
+                "id": 71,
+                "category": "other"
+            },
+            {
+                "id": 72,
+                "category": "usage"
+            },
+            {
+                "id": 73,
+                "category": "other"
+            },
+            {
+                "id": 74,
+                "category": "usage"
+            },
+            {
+                "id": 75,
+                "category": "other"
+            },
+            {
+                "id": 76,
+                "category": "expand"
+            },
+            {
+                "id": 77,
+                "category": "other"
+            },
+            {
+                "id": 78,
+                "category": "expand"
+            },
+            {
+                "id": 79,
+                "category": "other"
+            },
+            {
+                "id": 80,
+                "category": "expand"
+            },
+            {
+                "id": 81,
+                "category": "other"
+            },
+            {
+                "id": 82,
+                "category": "expand"
+            },
+            {
+                "id": 83,
+                "category": "other"
+            },
+            {
+                "id": 84,
+                "category": "usage"
+            },
+            {
+                "id": 85,
+                "category": "other"
+            },
+            {
+                "id": 86,
+                "category": "usage"
+            },
+            {
+                "id": 87,
+                "category": "other"
+            },
+            {
+                "id": 88,
+                "category": "expand"
+            },
+            {
+                "id": 89,
+                "category": "other"
+            },
+            {
+                "id": 90,
+                "category": "rationale"
+            },
+            {
+                "id": 91,
+                "category": "other"
+            },
+            {
+                "id": 92,
+                "category": "rationale"
+            },
+            {
+                "id": 93,
+                "category": "other"
+            },
+            {
+                "id": 94,
+                "category": "expand"
+            },
+            {
+                "id": 95,
+                "category": "other"
+            },
+            {
+                "id": 96,
+                "category": "usage"
+            },
+            {
+                "id": 97,
+                "category": "other"
+            },
+            {
+                "id": 98,
+                "category": "expand"
+            },
+            {
+                "id": 99,
+                "category": "other"
+            },
+            {
+                "id": 100,
+                "category": "expand"
+            },
+            {
+                "id": 101,
+                "category": "other"
+            },
+            {
+                "id": 102,
+                "category": "expand"
+            },
+            {
+                "id": 103,
+                "category": "other"
+            },
+            {
+                "id": 104,
+                "category": "usage"
+            },
+            {
+                "id": 105,
+                "category": "other"
+            },
+            {
+                "id": 106,
+                "category": "usage"
+            },
+            {
+                "id": 107,
+                "category": "other"
+            },
+            {
+                "id": 108,
+                "category": "usage"
+            },
+            {
+                "id": 109,
+                "category": "other"
+            },
+            {
+                "id": 110,
+                "category": "rationale"
+            },
+            {
+                "id": 111,
+                "category": "other"
+            },
+            {
+                "id": 112,
+                "category": "rationale"
+            },
+            {
+                "id": 113,
+                "category": "other"
+            },
+            {
+                "id": 114,
+                "category": "usage"
+            },
+            {
+                "id": 115,
+                "category": "other"
+            },
+            {
+                "id": 116,
+                "category": "usage"
+            },
+            {
+                "id": 117,
+                "category": "other"
+            },
+            {
+                "id": 118,
+                "category": "usage"
+            },
+            {
+                "id": 119,
+                "category": "other"
+            },
+            {
+                "id": 120,
+                "category": "rationale"
+            },
+            {
+                "id": 121,
+                "category": "other"
+            },
+            {
+                "id": 122,
+                "category": "expand"
+            },
+            {
+                "id": 123,
+                "category": "other"
+            },
+            {
+                "id": 124,
+                "category": "rationale"
+            },
+            {
+                "id": 125,
+                "category": "other"
+            },
+            {
+                "id": 126,
+                "category": "usage"
+            },
+            {
+                "id": 127,
+                "category": "other"
+            },
+            {
+                "id": 128,
+                "category": "usage"
+            },
+            {
+                "id": 129,
+                "category": "other"
+            },
+            {
+                "id": 130,
+                "category": "usage"
+            },
+            {
+                "id": 131,
+                "category": "other"
+            },
+            {
+                "id": 132,
+                "category": "expand"
+            },
+            {
+                "id": 133,
+                "category": "other"
+            },
+            {
+                "id": 134,
+                "category": "rationale"
+            },
+            {
+                "id": 135,
+                "category": "other"
+            },
+            {
+                "id": 136,
+                "category": "usage"
+            },
+            {
+                "id": 137,
+                "category": "other"
+            },
+            {
+                "id": 138,
+                "category": "expand"
+            },
+            {
+                "id": 139,
+                "category": "other"
+            },
+            {
+                "id": 140,
+                "category": "expand"
+            },
+            {
+                "id": 141,
+                "category": "other"
+            },
+            {
+                "id": 142,
+                "category": "expand"
+            },
+            {
+                "id": 143,
+                "category": "other"
+            },
+            {
+                "id": 144,
+                "category": "expand"
+            },
+            {
+                "id": 145,
+                "category": "other"
+            },
+            {
+                "id": 146,
+                "category": "usage"
+            },
+            {
+                "id": 147,
+                "category": "other"
+            },
+            {
+                "id": 148,
+                "category": "other"
+            },
+            {
+                "id": 149,
+                "category": "ownership"
+            },
+            {
+                "id": 150,
+                "category": "ownership"
+            },
+            {
+                "id": 151,
+                "category": "ownership"
+            }
+        ]
+    },
+    "DefaultMethodInterceptionTest.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "ownership"
+            },
+            {
+                "id": 4,
+                "category": "expand"
+            },
+            {
+                "id": 5,
+                "category": "other"
+            },
+            {
+                "id": 6,
+                "category": "other"
+            },
+            {
+                "id": 7,
+                "category": "other"
+            }
+        ]
+    },
+    "Element.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "expand"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "ownership"
+            }
+        ]
+    },
+    "EncounterImpl.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "ownership"
+            }
+        ]
+    },
+    "ImplicitBindingTest.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "ownership"
+            }
+        ]
+    },
+    "ManagedFilterPipeline.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            }
+        ]
+    },
+    "PrivateElementProcessor": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "ownership"
+            }
+        ]
+    },
+    "ProxyFactoryTest.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "ownership"
+            }
+        ]
+    },
+    "SpiUtils.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "ownership"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            }
+        ]
+    },
+    "AbstractFocusable.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "ownership"
+            },
+            {
+                "id": 6,
+                "category": "ownership"
+            }
+        ]
+    },
+    "AbstractMultiSelectState.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "ownership"
+            },
+            {
+                "id": 5,
+                "category": "other"
+            }
+        ]
+    },
+    "AbstractProperty.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "expand"
+            },
+            {
+                "id": 5,
+                "category": "other"
+            },
+            {
+                "id": 6,
+                "category": "ownership"
+            },
+            {
+                "id": 7,
+                "category": "other"
+            },
+            {
+                "id": 8,
+                "category": "deprecation"
+            },
+            {
+                "id": 9,
+                "category": "pointer"
+            },
+            {
+                "id": 10,
+                "category": "deprecation"
+            },
+            {
+                "id": 11,
+                "category": "expand"
+            },
+            {
+                "id": 12,
+                "category": "deprecation"
+            },
+            {
+                "id": 13,
+                "category": "pointer"
+            },
+            {
+                "id": 14,
+                "category": "expand"
+            },
+            {
+                "id": 15,
+                "category": "other"
+            }
+        ]
+    },
+    "AbstractSingleComponentContainerState.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "deprecation"
+            }
+        ]
+    },
+    "AdjacentElementsWithTooltipsTest.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "ownership"
+            }
+        ]
+    },
+    "ApplicationConfiguration.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "deprecation"
+            },
+            {
+                "id": 6,
+                "category": "other"
+            },
+            {
+                "id": 7,
+                "category": "expand"
+            },
+            {
+                "id": 8,
+                "category": "deprecation"
+            }
+        ]
+    },
+    "BootstrapPageResponse.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "expand"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "other"
+            },
+            {
+                "id": 6,
+                "category": "ownership"
+            }
+        ]
+    },
+    "ButtonRenderer.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "usage"
+            },
+            {
+                "id": 3,
+                "category": "usage"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "deprecation"
+            },
+            {
+                "id": 6,
+                "category": "ownership"
+            }
+        ]
+    },
+    "ClientRpcWriter.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "ownership"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            }
+        ]
+    },
+    "ColorPickerServerRpc.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "other"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "deprecation"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            }
+        ]
+    },
+    "ComboBoxState.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "deprecation"
+            }
+        ]
+    },
+    "DeclarativeValueProvider.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "usage"
+            },
+            {
+                "id": 6,
+                "category": "other"
+            }
+        ]
+    },
+    "DoubleRangeValidator.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "ownership"
+            }
+        ]
+    },
+    "FooterDoubleClickHandler.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "ownership"
+            }
+        ]
+    },
+    "Grid.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "ownership"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "other"
+            },
+            {
+                "id": 6,
+                "category": "usage"
+            },
+            {
+                "id": 7,
+                "category": "other"
+            },
+            {
+                "id": 8,
+                "category": "pointer"
+            },
+            {
+                "id": 9,
+                "category": "expand"
+            },
+            {
+                "id": 10,
+                "category": "other"
+            },
+            {
+                "id": 11,
+                "category": "other"
+            },
+            {
+                "id": 12,
+                "category": "usage"
+            },
+            {
+                "id": 13,
+                "category": "other"
+            },
+            {
+                "id": 14,
+                "category": "pointer"
+            },
+            {
+                "id": 15,
+                "category": "summary"
+            },
+            {
+                "id": 16,
+                "category": "other"
+            },
+            {
+                "id": 17,
+                "category": "expand"
+            },
+            {
+                "id": 18,
+                "category": "pointer"
+            },
+            {
+                "id": 19,
+                "category": "other"
+            },
+            {
+                "id": 20,
+                "category": "pointer"
+            },
+            {
+                "id": 21,
+                "category": "other"
+            },
+            {
+                "id": 22,
+                "category": "pointer"
+            },
+            {
+                "id": 23,
+                "category": "summary"
+            },
+            {
+                "id": 24,
+                "category": "pointer"
+            },
+            {
+                "id": 25,
+                "category": "summary"
+            },
+            {
+                "id": 26,
+                "category": "other"
+            },
+            {
+                "id": 27,
+                "category": "pointer"
+            },
+            {
+                "id": 28,
+                "category": "summary"
+            },
+            {
+                "id": 29,
+                "category": "other"
+            },
+            {
+                "id": 30,
+                "category": "usage"
+            },
+            {
+                "id": 31,
+                "category": "other"
+            },
+            {
+                "id": 32,
+                "category": "pointer"
+            },
+            {
+                "id": 33,
+                "category": "summary"
+            },
+            {
+                "id": 34,
+                "category": "other"
+            },
+            {
+                "id": 35,
+                "category": "usage"
+            },
+            {
+                "id": 36,
+                "category": "other"
+            },
+            {
+                "id": 37,
+                "category": "usage"
+            },
+            {
+                "id": 38,
+                "category": "other"
+            },
+            {
+                "id": 39,
+                "category": "usage"
+            },
+            {
+                "id": 40,
+                "category": "other"
+            },
+            {
+                "id": 41,
+                "category": "usage"
+            },
+            {
+                "id": 42,
+                "category": "other"
+            },
+            {
+                "id": 43,
+                "category": "usage"
+            },
+            {
+                "id": 44,
+                "category": "other"
+            },
+            {
+                "id": 45,
+                "category": "summary"
+            },
+            {
+                "id": 46,
+                "category": "other"
+            },
+            {
+                "id": 47,
+                "category": "summary"
+            },
+            {
+                "id": 48,
+                "category": "other"
+            },
+            {
+                "id": 49,
+                "category": "usage"
+            },
+            {
+                "id": 50,
+                "category": "other"
+            },
+            {
+                "id": 51,
+                "category": "summary"
+            },
+            {
+                "id": 52,
+                "category": "other"
+            },
+            {
+                "id": 53,
+                "category": "usage"
+            },
+            {
+                "id": 54,
+                "category": "pointer"
+            },
+            {
+                "id": 55,
+                "category": "summary"
+            },
+            {
+                "id": 56,
+                "category": "other"
+            },
+            {
+                "id": 57,
+                "category": "usage"
+            },
+            {
+                "id": 58,
+                "category": "other"
+            },
+            {
+                "id": 59,
+                "category": "summary"
+            },
+            {
+                "id": 60,
+                "category": "other"
+            },
+            {
+                "id": 61,
+                "category": "usage"
+            },
+            {
+                "id": 62,
+                "category": "other"
+            },
+            {
+                "id": 63,
+                "category": "usage"
+            },
+            {
+                "id": 64,
+                "category": "other"
+            },
+            {
+                "id": 65,
+                "category": "usage"
+            },
+            {
+                "id": 66,
+                "category": "other"
+            },
+            {
+                "id": 67,
+                "category": "rationale"
+            },
+            {
+                "id": 68,
+                "category": "other"
+            }
+        ]
+    },
+    "GridManyColumnsV7.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            }
+        ]
+    },
+    "GridSelectionModel.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "ownership"
+            },
+            {
+                "id": 6,
+                "category": "other"
+            },
+            {
+                "id": 7,
+                "category": "usage"
+            },
+            {
+                "id": 8,
+                "category": "usage"
+            },
+            {
+                "id": 9,
+                "category": "pointer"
+            },
+            {
+                "id": 10,
+                "category": "pointer"
+            },
+            {
+                "id": 11,
+                "category": "pointer"
+            }
+        ]
+    },
+    "HeaderRow.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "ownership"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            }
+        ]
+    },
+    "InternalContainerAnnotationForJS.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "usage"
+            },
+            {
+                "id": 3,
+                "category": "deprecation"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "rationale"
+            },
+            {
+                "id": 6,
+                "category": "other"
+            },
+            {
+                "id": 7,
+                "category": "ownership"
+            },
+            {
+                "id": 8,
+                "category": "other"
+            }
+        ]
+    },
+    "MyPickerConnector.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "other"
+            },
+            {
+                "id": 2,
+                "category": "pointer"
+            },
+            {
+                "id": 3,
+                "category": "pointer"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "pointer"
+            },
+            {
+                "id": 6,
+                "category": "other"
+            },
+            {
+                "id": 7,
+                "category": "other"
+            },
+            {
+                "id": 8,
+                "category": "ownership"
+            }
+        ]
+    },
+    "NotEmptyValidatorTest.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "ownership"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            }
+        ]
+    },
+    "PopupView.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "other"
+            },
+            {
+                "id": 2,
+                "category": "summary"
+            },
+            {
+                "id": 3,
+                "category": "expand"
+            },
+            {
+                "id": 4,
+                "category": "expand"
+            },
+            {
+                "id": 5,
+                "category": "pointer"
+            },
+            {
+                "id": 6,
+                "category": "other"
+            },
+            {
+                "id": 7,
+                "category": "ownership"
+            },
+            {
+                "id": 8,
+                "category": "other"
+            },
+            {
+                "id": 9,
+                "category": "expand"
+            },
+            {
+                "id": 10,
+                "category": "rationale"
+            },
+            {
+                "id": 11,
+                "category": "other"
+            },
+            {
+                "id": 12,
+                "category": "other"
+            },
+            {
+                "id": 13,
+                "category": "usage"
+            },
+            {
+                "id": 14,
+                "category": "rationale"
+            },
+            {
+                "id": 15,
+                "category": "other"
+            },
+            {
+                "id": 16,
+                "category": "other"
+            },
+            {
+                "id": 17,
+                "category": "expand"
+            },
+            {
+                "id": 18,
+                "category": "rationale"
+            },
+            {
+                "id": 19,
+                "category": "other"
+            },
+            {
+                "id": 20,
+                "category": "usage"
+            },
+            {
+                "id": 21,
+                "category": "pointer"
+            },
+            {
+                "id": 22,
+                "category": "other"
+            },
+            {
+                "id": 23,
+                "category": "other"
+            },
+            {
+                "id": 24,
+                "category": "other"
+            },
+            {
+                "id": 25,
+                "category": "other"
+            },
+            {
+                "id": 26,
+                "category": "expand"
+            },
+            {
+                "id": 27,
+                "category": "rationale"
+            },
+            {
+                "id": 28,
+                "category": "other"
+            },
+            {
+                "id": 29,
+                "category": "usage"
+            },
+            {
+                "id": 30,
+                "category": "other"
+            }
+        ]
+    },
+    "PortletDummyRequestHandler.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "ownership"
+            }
+        ]
+    },
+    "QueryBuilder.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "deprecation"
+            }
+        ]
+    },
+    "RequiredTextFieldTest.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "ownership"
+            }
+        ]
+    },
+    "RpcDataProviderExtension.java": {
+        "phi-4": []
+    },
+    "SelectAllEvent.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "deprecation"
+            },
+            {
+                "id": 5,
+                "category": "ownership"
+            },
+            {
+                "id": 6,
+                "category": "usage"
+            },
+            {
+                "id": 7,
+                "category": "usage"
+            }
+        ]
+    },
+    "ShouldWriteDataDelegate.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "pointer"
+            },
+            {
+                "id": 2,
+                "category": "summary"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "pointer"
+            },
+            {
+                "id": 5,
+                "category": "other"
+            },
+            {
+                "id": 6,
+                "category": "deprecation"
+            },
+            {
+                "id": 7,
+                "category": "ownership"
+            }
+        ]
+    },
+    "SimpleGridUI.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "ownership"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            }
+        ]
+    },
+    "SpacerVisibilityChangedEvent.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "ownership"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            }
+        ]
+    },
+    "TargetDetailsImpl.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "deprecation"
+            },
+            {
+                "id": 4,
+                "category": "deprecation"
+            }
+        ]
+    },
+    "UnknownExtensionConnector.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "ownership"
+            }
+        ]
+    },
+    "VaadinPortlet.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "expand"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "ownership"
+            },
+            {
+                "id": 5,
+                "category": "rationale"
+            },
+            {
+                "id": 6,
+                "category": "expand"
+            },
+            {
+                "id": 7,
+                "category": "rationale"
+            },
+            {
+                "id": 8,
+                "category": "deprecation"
+            },
+            {
+                "id": 9,
+                "category": "expand"
+            },
+            {
+                "id": 10,
+                "category": "rationale"
+            },
+            {
+                "id": 11,
+                "category": "expand"
+            },
+            {
+                "id": 12,
+                "category": "rationale"
+            },
+            {
+                "id": 13,
+                "category": "expand"
+            },
+            {
+                "id": 14,
+                "category": "rationale"
+            },
+            {
+                "id": 15,
+                "category": "expand"
+            },
+            {
+                "id": 16,
+                "category": "rationale"
+            },
+            {
+                "id": 17,
+                "category": "ownership"
+            },
+            {
+                "id": 18,
+                "category": "other"
+            },
+            {
+                "id": 19,
+                "category": "deprecation"
+            },
+            {
+                "id": 20,
+                "category": "expand"
+            },
+            {
+                "id": 21,
+                "category": "deprecation"
+            },
+            {
+                "id": 22,
+                "category": "expand"
+            }
+        ]
+    },
+    "VaadinServiceInitListener.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "other"
+            },
+            {
+                "id": 2,
+                "category": "summary"
+            },
+            {
+                "id": 3,
+                "category": "expand"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "rationale"
+            },
+            {
+                "id": 6,
+                "category": "expand"
+            },
+            {
+                "id": 7,
+                "category": "usage"
+            },
+            {
+                "id": 8,
+                "category": "expand"
+            },
+            {
+                "id": 9,
+                "category": "usage"
+            },
+            {
+                "id": 10,
+                "category": "other"
+            },
+            {
+                "id": 11,
+                "category": "other"
+            },
+            {
+                "id": 12,
+                "category": "expand"
+            },
+            {
+                "id": 13,
+                "category": "other"
+            },
+            {
+                "id": 14,
+                "category": "ownership"
+            },
+            {
+                "id": 15,
+                "category": "ownership"
+            }
+        ]
+    },
+    "VGridLayout.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "deprecation"
+            }
+        ]
+    },
+    "VLazyInitItemIdentifiers.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "other"
+            },
+            {
+                "id": 2,
+                "category": "ownership"
+            },
+            {
+                "id": 3,
+                "category": "deprecation"
+            },
+            {
+                "id": 4,
+                "category": "usage"
+            },
+            {
+                "id": 5,
+                "category": "pointer"
+            }
+        ]
+    },
+    "VScrollTable.java": {
+        "phi-4": []
+    },
+    "VTextArea.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "rationale"
+            },
+            {
+                "id": 4,
+                "category": "deprecation"
+            },
+            {
+                "id": 5,
+                "category": "other"
+            },
+            {
+                "id": 6,
+                "category": "ownership"
+            }
+        ]
+    },
+    "VUpload.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "other"
+            },
+            {
+                "id": 2,
+                "category": "rationale"
+            },
+            {
+                "id": 3,
+                "category": "expand"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "ownership"
+            },
+            {
+                "id": 6,
+                "category": "other"
+            }
+        ]
+    },
+    "Window.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "pointer"
+            },
+            {
+                "id": 3,
+                "category": "usage"
+            },
+            {
+                "id": 4,
+                "category": "other"
+            },
+            {
+                "id": 5,
+                "category": "other"
+            },
+            {
+                "id": 6,
+                "category": "usage"
+            },
+            {
+                "id": 7,
+                "category": "other"
+            },
+            {
+                "id": 8,
+                "category": "other"
+            },
+            {
+                "id": 9,
+                "category": "usage"
+            },
+            {
+                "id": 10,
+                "category": "other"
+            },
+            {
+                "id": 11,
+                "category": "usage"
+            },
+            {
+                "id": 12,
+                "category": "other"
+            },
+            {
+                "id": 13,
+                "category": "summary"
+            },
+            {
+                "id": 14,
+                "category": "other"
+            },
+            {
+                "id": 15,
+                "category": "rationale"
+            },
+            {
+                "id": 16,
+                "category": "pointer"
+            },
+            {
+                "id": 17,
+                "category": "ownership"
+            },
+            {
+                "id": 18,
+                "category": "other"
+            }
+        ]
+    },
+    "XhrConnectionError.java": {
+        "phi-4": [
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "other"
+            },
+            {
+                "id": 3,
+                "category": "other"
+            },
+            {
+                "id": 4,
+                "category": "rationale"
+            },
+            {
+                "id": 5,
+                "category": "ownership"
+            }
+        ]
     }
 }

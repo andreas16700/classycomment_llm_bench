@@ -9,7 +9,7 @@
 The model is given the comment type categories, along with a short description (taken from the appropriate paper where each taxonomy is defined (Pascarella and Bacchelli,2017; Zhang et al.,
 2018; Ranietal.,2021)
 
-The comment is given each comment, each line of which is prefixed with a number. The model will use this number, to classify each line. 
+The model is also given each comment, each line of which is prefixed with a number. The model will use this number, to classify each line. 
 
 Using [structured output](https://github.com/dottxt-ai/outlines), the model responds with a json object containing each line's classification.
 

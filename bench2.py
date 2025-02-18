@@ -148,7 +148,7 @@ if __name__ == '__main__':
         # "qwen2.5-14b-instruct-mlx",
         # "meta-llama-3.1-8b-instruct",
         # "mistral-nemo-instruct-2407",
-        # "granite-3.1-8b-instruct"
+        "granite-3.1-8b-instruct"
     ]
 
     bench1_name = "bench2.json"
