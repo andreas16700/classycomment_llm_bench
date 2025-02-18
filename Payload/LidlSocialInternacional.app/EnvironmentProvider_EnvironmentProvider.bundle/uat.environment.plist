@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>userMetrics</key>
+	<string>https://usermetrics-uat.lidlplus.com/api</string>
+	<key>lidlTravel</key>
+	<string>https://travel-uat.lidlplus.com/api</string>
+	<key>uniqueAccount</key>
+	<string>https://profile-uat.lidl.com</string>
+	<key>localization</key>
+	<string>https://localization-uat.lidlplus.com/resources</string>
+	<key>appVersions</key>
+	<string>https://appgateway-uat.lidlplus.com/versions</string>
+	<key>brochures</key>
+	<string>https://brochures-uat.lidlplus.com/api</string>
+	<key>brochuresCombined</key>
+	<string>https://brochures-uat.lidlplus.com/api</string>
+	<key>couponPlus</key>
+	<string>https://couponplus-uat.lidlplus.com/api</string>
+	<key>recipes</key>
+	<string>https://recipes-uat.lidlplus.com/api</string>
+	<key>payments</key>
+	<string>https://payments-uat.lidlplus.com</string>
+	<key>sso</key>
+	<string>https://accounts-uat.lidl.com</string>
+	<key>stores</key>
+	<string>https://stores-uat.lidlplus.com</string>
+	<key>gateway</key>
+	<string>https://appgateway-uat.lidlplus.com</string>
+	<key>openGift</key>
+	<string>https://opengift-uat.lidlplus.com/api</string>
+	<key>ssoUser</key>
+	<string>https://accounts-uat.lidl.com</string>
+	<key>digitalLeaflet</key>
+	<string>https://leaflet-api-01-web-stg-we-001.azurewebsites.net</string>
+	<key>eticket</key>
+	<string>https://eticket-uat.lidlplus.com</string>
+	<key>purchaseLottery</key>
+	<string>https://purchaselottery-uat.lidlplus.com/api</string>
+	<key>stampCard</key>
+	<string>https://stampcard-uat.lidlplus.com/api</string>
+	<key>familyClub</key>
+	<string>https://familyclub-uat.lidl.com/children</string>
+	<key>stampCardRewards</key>
+	<string>https://giveaway-uat.lidlplus.com/api</string>
+	<key>collectingModel</key>
+	<string>https://mypoints-uat.lidl.com</string>
+	<key>marketingPreferences</key>
+	<string>https://profile-uat.lidl.com/marketing-preferences</string>
+	<key>myLidlAccount</key>
+	<string>https://mylidlaccount-uat.lidl.com</string>
+	<key>campaign</key>
+	<string>https://digital-leaflet-uat.lidlplus.com/api</string>
+</dict>
+</plist>

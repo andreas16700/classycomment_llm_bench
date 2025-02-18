@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "1656AE8D-C585-4CA9-9F46-CAD23196ABC1",
+      "name" : "Default",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:LidlPlus.xcodeproj",
+        "identifier" : "259EC46C2C32A4B700FB9CD7",
+        "name" : "LidlPlusUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

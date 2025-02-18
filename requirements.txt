@@ -1,2 +1,6 @@
-pandas
-OpenAI
+pandas~=2.2.3
+OpenAI~=1.61.1
+tqdm~=4.67.1
+torch~=2.6.0
+numpy~=2.2.2
+sentence-transformers~=3.4.1

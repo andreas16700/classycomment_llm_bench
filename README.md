@@ -9,7 +9,9 @@
 The model is given the comment type categories, along with a short description (taken from the appropriate paper where each taxonomy is defined (Pascarella and Bacchelli,2017; Zhang et al.,
 2018; Ranietal.,2021)
 
-Using [structured output](https://github.com/dottxt-ai/outlines), the model responds with a json object containing the comment, segmented into relevant types.
+The comment is given each comment, each line of which is prefixed with a number. The model will use this number, to classify each line. 
+
+Using [structured output](https://github.com/dottxt-ai/outlines), the model responds with a json object containing each line's classification.
 
 The prompt and corresponding categories are language-dependant. For context, since this is intended for an IDE plugin, the programming language is known (Python/Pharo/Java).
 
@@ -31,7 +33,7 @@ Here's a brief description of each category:
 - **pointer**: The comment contains references to linked resources, using tags like @see, @link, or @url, or even identifiers such as “FIX #2611” or “BUG #82100.”
 - **other**: Use this category for any comment that doesn't fit into any of the above types.
 
-The comment could in its entirety (or parts of it), belong to none, one, multiple, or every category. Any segment of the given text should not be classified to more than one category. If no category fits, use the 'other' category.
+The comment could in its entirety (or parts of it), belong to none, one, multiple, or every category. Any line of the given text should not be classified to more than one category. Each line begins with its ID and a space. If no category fits, use the 'other' category.
 Here's the comment:
 """
 Azure Blob File System implementation of AbstractFileSystem.
@@ -41,87 +43,56 @@ This impl delegates to the old FileSystem
 Along with this, the model is given this JSON schema:
 ```json
 {
-        "name": "Segmented and Classified Code Comment",
-        "schema": {
-            "type": "object",
-            "properties": {
-    "summary": {
+  "type": "json_schema",
+  "json_schema": {
+    "name": "line_classifications",
+    "schema": {
       "type": "array",
-      "description": "Comment describes a brief description of the code. It answers the 'what' of the code.",
       "items": {
-        "type": "string"
-      }
-    },
-    "expand": {
-      "type": "array",
-      "description": "Comment provides more details about the code's behavior. It answers the 'how' of the code.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "rationale": {
-      "type": "array",
-      "description": "Comment explains the reasoning behind certain choices, patterns, or options in the code. It answers the 'why' of the code.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "deprecation": {
-      "type": "array",
-      "description": "Comment contains explicit warnings regarding deprecated artifacts, alternative suggestions, or future deprecation notes (including tags like @deprecated, @version, or @since).",
-      "items": {
-        "type": "string"
-      }
-    },
-    "usage": {
-      "type": "array",
-      "description": "Comment includes explicit suggestions, use cases, examples, or code snippets aimed at the user (often marked with metadata such as @usage, @param, or @return).",
-      "items": {
-        "type": "string"
-      }
-    },
-    "ownership": {
-      "type": "array",
-      "description": "Comment details authorship, credentials, or external references about the developers (e.g., using the @author tag).",
-      "items": {
-        "type": "string"
-      }
-    },
-    "pointer": {
-      "type": "array",
-      "description": "Comment contains references to linked resources, external references, or tags such as @see, @link, @url, or even identifiers like FIX #2611.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "other": {
-      "type": "array",
-      "description": "for any comment that doesn't fit any other comment type.",
-      "items": {
-        "type": "string"
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "A unique identifier for the line."
+          },
+          "category": {
+            "type": "string",
+            "description": "The classification category for the line.",
+            "enum": [
+              "summary",
+              "expand",
+              "rationale",
+              "deprecation",
+              "usage",
+              "ownership",
+              "pointer",
+              "other"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "category"
+        ],
+        "additionalProperties": false
       }
     }
-  },
-            "required": []
-        }
-    }
+  }
+}
+
 ```
 
 The model responds with this object:
 ```json
-{
-  "summary": [
-    "Azure Blob File System implementation of AbstractFileSystem."
-  ],
-  "expand": [
-    "This impl delegates to the old FileSystem"
-  ],
-  "rationale": [],
-  "deprecation": [],
-  "usage": [],
-  "ownership": [],
-  "pointer": [],
-  "other": []
-}
+[
+            {
+                "id": 1,
+                "category": "summary"
+            },
+            {
+                "id": 2,
+                "category": "rationale"
+            }
+]
 ```
 *in this case this is from the 4-bit quantized version of Phi-4*

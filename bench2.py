@@ -1,100 +1,68 @@
 from tqdm import tqdm
 import pandas as pd
 from openai import OpenAI
-import json
+import json, torch
+from java import java_descriptions, java_types
+
+
+VERBOSE = False
+
+
 
 client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
-format = {
-    "type": "json_schema",
-    "json_schema": {
-        "name": "Segmented and Classified Code Comment",
-        "schema": {
-            "type": "object",
-            "properties": {
-    "summary": {
-      "type": "array",
-      "description": "Comment describes a brief description of the code. It answers the 'what' of the code.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "expand": {
-      "type": "array",
-      "description": "Comment provides more details about the code's behavior. It answers the 'how' of the code.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "rationale": {
-      "type": "array",
-      "description": "Comment explains the reasoning behind certain choices, patterns, or options in the code. It answers the 'why' of the code.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "deprecation": {
-      "type": "array",
-      "description": "Comment contains explicit warnings regarding deprecated artifacts, alternative suggestions, or future deprecation notes (including tags like @deprecated, @version, or @since).",
-      "items": {
-        "type": "string"
-      }
-    },
-    "usage": {
-      "type": "array",
-      "description": "Comment includes explicit suggestions, use cases, examples, or code snippets aimed at the user (often marked with metadata such as @usage, @param, or @return).",
-      "items": {
-        "type": "string"
-      }
-    },
-    "ownership": {
-      "type": "array",
-      "description": "Comment details authorship, credentials, or external references about the developers (e.g., using the @author tag).",
-      "items": {
-        "type": "string"
-      }
-    },
-    "pointer": {
-      "type": "array",
-      "description": "Comment contains references to linked resources, external references, or tags such as @see, @link, @url, or even identifiers like FIX #2611.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "other": {
-      "type": "array",
-      "description": "for any comment that doesn't fit any other comment type.",
-      "items": {
-        "type": "string"
-      }
-    }
-  },
-            "required": []
-        },
-    }
-}
 
-def classify(comment: str, model_id: str):
+def get_json_format(types):
+    format = {
+        "type": "json_schema",
+        "json_schema": {
+            "name": "line_classifications",
+            "schema": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer",
+                            "description": "A unique identifier for the line."
+                        },
+                        "category": {
+                            "type": "string",
+                            "description": "The classification category for the line.",
+                            "enum": types
+                        }
+                    },
+                    "required": ["id", "category"],
+                    "additionalProperties": False
+                }
+            }
+        }
+    }
+    return format
+
+
+
+
+
+def classify(comment: str, model_id: str, types, missing_ids: list[int]=None):
+    comment = "\n".join(f"{i+1} {line}" for i, line in enumerate(comment.splitlines()))
+    suppl = ""
+    if missing_ids and len(missing_ids) > 0:
+        missing_ids = [f"{n}" for n in missing_ids]
+        suppl = f"Make sure to especially classify the following lines: {", ".join(missing_ids)}"
     messages = [
     {"role": "system", "content": "You are a helpful AI assistant."},
     {"role": "user", "content": f"""Segment and classify the following code comment into a given taxonomy of code comment categories (summary, expand, rationale, deprecation, usage, ownership, pointer, other).
 Here's a brief description of each category:
 
-- **summary**: The comment describes a brief description of the code. It answers the "what" of the code.
-- **expand**: Similar to the summary category, this label indicates that the comment provides a more detailed description of the code. It answers the "how" of the code.
-- **rationale**: The comment explains the reasoning behind certain choices, patterns, or options in the code. It answers the "why" of the code.
-- **deprecation**: The comment contains explicit warnings regarding deprecated interface artifacts. It includes information about alternative methods or classes (e.g., “do not use [this]”, “is it safe to use?” or “refer to: [ref]”), future deprecation plans, or scheduled changes. Tags like @version, @deprecated, or @since may also be present.
-- **usage**: The comment offers explicit suggestions, examples, or use cases for users planning to use a functionality. It might include code snippets or metadata marks such as @usage, @param, or @return.
-- **ownership**: The comment identifies the authors or ownership details, possibly including external references or credentials (commonly marked with @author).
-- **pointer**: The comment contains references to linked resources, using tags like @see, @link, or @url, or even identifiers such as “FIX #2611” or “BUG #82100.”
-- **other**: Use this category for any comment that doesn't fit into any of the above types.
-
-The comment could in its entirety (or parts of it), belong to none, one, multiple, or every category. Any segment of the given text should not be classified to more than one category. If no category fits, use the 'other' category.
+{java_descriptions}
+The comment could in its entirety (or parts of it), belong to none, one, multiple, or every category. Any line of the given text should not be classified to more than one category. Each line begins with its ID and a space. If no category fits, use the 'other' category.
+{suppl}
 Here's the comment:
 \"\"\"
 {comment}
 \"\"\""""}
 ]
-
+    format = get_json_format(types)
     # Get response from AI
     response = client.chat.completions.create(
         model=model_id,
@@ -114,18 +82,76 @@ Here's the comment:
         }
     return results
 
+def missing_ids_of_result(comment: str, result):
+    max_id = len(comment.splitlines())
+    ids = set(range(1, max_id+1))
+    found_ids = set()
+    for classification in result:
+        if "id" not in classification:
+            return list(ids)
+        found_ids.add(classification["id"])
+    missing_ids = ids - found_ids
+    return list(missing_ids)
 
+def keep_only_valid_results(result, valid_types, max_id: int):
+    to_keep = []
+    for classification in result:
+        if "category" not in classification:
+            if VERBOSE:
+                print(f"[INVALID] no category: {classification}")
+            continue
+        if classification["category"] not in valid_types:
+            if VERBOSE:
+                print(f"[INVALID] invalid category: {classification}")
+            continue
+        if "id" not in classification:
+            if VERBOSE:
+                print(f"[INVALID] no id: {classification}")
+            continue
+        id = classification["id"]
+        try:
+            id = int(id)
+        except (ValueError, TypeError):
+            if VERBOSE:
+                print(f"[INVALID] invalid id: {classification["id"]}")
+            continue
+        if id < 1 or id > max_id:
+            if VERBOSE:
+                print(f"[INVALID] invalid id: {classification['id']} (must be between 1 and {max_id})")
+            continue
+        to_keep.append(classification)
+    return to_keep
+
+
+def make_sure_all_classified(func, comment: str, max_retries = 10, valid_types = java_types):
+    # let's add some verbosity now.
+    result = func(None)
+    result = keep_only_valid_results(result, valid_types, max_id=len(comment.splitlines()))
+    unclassified_ids = missing_ids_of_result(comment, result)
+    retries = 0
+    while len(unclassified_ids) > 0:
+        retries += 1
+        if VERBOSE:
+            print(f"[DEBUG] [RETRY {retries}] unclassified ids: {unclassified_ids}. Got: {json.dumps(result, indent=2)}")
+        result = func(unclassified_ids)
+        unclassified_ids = missing_ids_of_result(comment, result)
+        if retries >= max_retries:
+            if VERBOSE:
+                print(f"[INVALID] exceeded max retries!")
+            return result
+    return result
 
 
 if __name__ == '__main__':
-
     models = [
         "phi-4",
         # "qwen2.5-14b-instruct-mlx",
-        # "meta-llama-3.1-8b-instruct"
+        # "meta-llama-3.1-8b-instruct",
+        # "mistral-nemo-instruct-2407",
+        # "granite-3.1-8b-instruct"
     ]
 
-    bench1_name = "bench1.json"
+    bench1_name = "bench2.json"
     current = {}
 
     try:
@@ -172,6 +198,8 @@ if __name__ == '__main__':
             current[class_name] = {}
         for model in models:
             if not model in current[class_name]:
-                r = classify(comment, model)
-                current[class_name][model] = r
+                # def make_sure_all_classified(func, comment: str, max_retries=10, valid_types=java_types):
+                result_with_retries = make_sure_all_classified(lambda missing_id: classify(comment, model, types=java_types, missing_ids=missing_id), comment=comment, valid_types=java_types)
+                # r = classify(comment, model)
+                current[class_name][model] = result_with_retries
                 save_current(current)

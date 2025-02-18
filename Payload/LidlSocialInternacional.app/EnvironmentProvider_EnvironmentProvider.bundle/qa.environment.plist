@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>userMetrics</key>
+	<string>https://usermetrics-qa.k8s.scrm.eu/api</string>
+	<key>lidlTravel</key>
+	<string>https://travel-qa.k8s.scrm.eu/api</string>
+	<key>uniqueAccount</key>
+	<string>https://profile-stg.lidl.com</string>
+	<key>localization</key>
+	<string>https://localization-qa.lidlplus.com/resources</string>
+	<key>appVersions</key>
+	<string>https://versions-api-web-qa-we-003.azurewebsites.net</string>
+	<key>brochures</key>
+	<string>https://brochures-qa.k8s.scrm.eu/api</string>
+	<key>brochuresCombined</key>
+	<string>https://brochures-qa.k8s.scrm.eu/api</string>
+	<key>couponPlus</key>
+	<string>https://couponplus-api-web-qa-we-001.azurewebsites.net/</string>
+	<key>recipes</key>
+	<string>https://recipes-api-01-web-qa-we-001.azurewebsites.net</string>
+	<key>payments</key>
+	<string>https://payments-int.lidlplus.com</string>
+	<key>sso</key>
+	<string>https://accounts-qa.lidl.com</string>
+	<key>stores</key>
+	<string>https://stores-api-web-qa-we-002.azurewebsites.net</string>
+	<key>gateway</key>
+	<string>https://lp-appgateway-int.azurewebsites.net</string>
+	<key>openGift</key>
+	<string>https://opengift-qa.k8s.scrm.eu/api</string>
+	<key>ssoUser</key>
+	<string>https://accounts-qa.lidl.com</string>
+	<key>digitalLeaflet</key>
+	<string>https://leaflet-api-01-web-stg-we-001.azurewebsites.net</string>
+	<key>eticket</key>
+	<string>https://eticket-api-01-web-stg-we-001.azurewebsites.net</string>
+	<key>purchaseLottery</key>
+	<string>https://purchaselottery-qa.k8s.scrm.eu/api</string>
+	<key>stampCard</key>
+	<string>https://lidlplus-int-lotterypromotions-api.azurewebsites.net</string>
+	<key>familyClub</key>
+	<string>https://familyclub-stg.lidl.com/children</string>
+	<key>stampCardRewards</key>
+	<string>https://giveaway-qa.k8s.scrm.eu/api</string>
+	<key>collectingModel</key>
+	<string>https://mypoints-qa.lidl.com</string>
+	<key>marketingPreferences</key>
+	<string>https://profile-stg.lidl.com/marketing-preferences</string>
+	<key>myLidlAccount</key>
+	<string>https://mylidlaccount-stg.lidl.com</string>
+	<key>campaign</key>
+	<string>https://digital-leaflet-qa.k8s.scrm.eu/api</string>
+</dict>
+</plist>

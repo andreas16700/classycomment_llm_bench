@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>userMetrics</key>
+	<string>http://localhost:8080</string>
+	<key>lidlTravel</key>
+	<string>http://localhost:8080</string>
+	<key>uniqueAccount</key>
+	<string>http://localhost:8080</string>
+	<key>localization</key>
+	<string>http://localhost:8080</string>
+	<key>appVersions</key>
+	<string>http://localhost:8080</string>
+	<key>brochures</key>
+	<string>http://localhost:8080</string>
+	<key>brochuresCombined</key>
+	<string>http://localhost:8080</string>
+	<key>couponPlus</key>
+	<string>http://localhost:8080</string>
+	<key>openGift</key>
+	<string>http://localhost:8080</string>
+	<key>recipes</key>
+	<string>http://localhost:8080</string>
+	<key>payments</key>
+	<string>http://localhost:8080</string>
+	<key>sso</key>
+	<string>http://localhost:8080</string>
+	<key>gateway</key>
+	<string>http://localhost:8080</string>
+	<key>stores</key>
+	<string>http://localhost:8080</string>
+	<key>ssoUser</key>
+	<string>http://localhost:8080</string>
+	<key>digitalLeaflet</key>
+	<string>http://localhost:8080</string>
+	<key>eticket</key>
+	<string>http://localhost:8080</string>
+	<key>purchaseLottery</key>
+	<string>http://localhost:8080</string>
+	<key>stampCard</key>
+	<string>http://localhost:8080</string>
+	<key>familyClub</key>
+	<string>http://localhost:8080</string>
+	<key>stampCardRewards</key>
+	<string>http://localhost:8080</string>
+	<key>collectingModel</key>
+	<string>https://localhost:8080</string>
+	<key>marketingPreferences</key>
+	<string>http://localhost:8080</string>
+	<key>myLidlAccount</key>
+	<string>http://localhost:8080</string>
+	<key>campaign</key>
+	<string>http://localhost:8080</string>
+</dict>
+</plist>

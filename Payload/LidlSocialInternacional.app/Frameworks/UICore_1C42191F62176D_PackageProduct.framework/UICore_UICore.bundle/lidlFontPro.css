@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'LidlFontPro-Regular';
+    src: local('LidlFontPro-Regular'),url('LidlFontPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LidlFontPro-Semibold';
+    src: local('LidlFontPro-Semibold'),url('LidlFontPro-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LidlFontPro-Bold';
+    src: local('LidlFontPro-Bold'),url('LidlFontPro-Bold.ttf') format('truetype');
+}
+
+body {
+    font-family: 'LidlFontPro-Regular'
+}
+
+b {
+    font-family: 'LidlFontPro-Semibold'
+}
